@@ -1,0 +1,7 @@
+- 👋 Hi, I’m @GioiaZheng  
+- 👀 I’m interested in AI, machine learning, natural language processing, and computer vision.  
+- 🌱 I’m currently learning Applied Computer Science and Artificial Intelligence at Sapienza Università di Roma.  
+- 💞️ I’m looking to collaborate on AI projects, especially in handwritten text recognition and real-world applications.  
+- 📫 How to reach me: gioia.zheng1@gmail.com  
+- 😄 Pronouns: she/her  
+- ⚡ Fun fact: I once designed and pitched a business plan that won 1st place in a regional innovation competition!

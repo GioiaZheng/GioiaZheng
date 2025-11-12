@@ -1,23 +1,32 @@
-# Gioia Zheng
+<h1 align="center">Hi, I'm Gioia Zheng</h1>
 
-**Computer Science & Artificial Intelligence Student**  
-Sapienza University of Rome · Rome, Italy  
-📧 gioia.zheng.stud@gmail.com | 🌐 [LinkedIn](https://www.linkedin.com/in/gioia-zheng-9233a0303)
+<p align="center">
+  <b>Computer Science & Artificial Intelligence Student</b><br>
+  Sapienza University of Rome · Rome, Italy
+</p>
+
+<p align="center">
+  <a href="mailto:gioia.zheng.stud@gmail.com">Email</a> ·
+  <a href="https://www.linkedin.com/in/gioia-zheng-9233a0303">LinkedIn</a> ·
+  <a href="https://www.coursera.org/user/23e1156c620d9bb62dff36ec677501b2">Coursera</a> ·
+  <a href="https://leetcode.com/u/GioiaZheng/">LeetCode</a> ·
+  <a href="https://www.kaggle.com/gioiazheng">Kaggle</a>
+</p>
 
 ---
 
 ## About Me
 
 I am an undergraduate student in *Applied Computer Science and Artificial Intelligence* at Sapienza University of Rome.  
-My main interests lie in machine learning, computer vision, and cybersecurity.  
+My main interests lie in **machine learning**, **computer vision**, and **cybersecurity**.  
 I aim to bridge AI technologies with information security through both academic research and practical development.
 
 Currently, I am gaining experience in:
 
-- Python and AI development – data analysis, ML model implementation, and text recognition  
-- Web development – front-end (Vue.js / React Native) and back-end (Go / REST APIs)  
-- Cybersecurity fundamentals – TryHackMe and HackTheBox learning paths  
-- Open source and collaboration – publishing academic and course-based projects on GitHub  
+- **Python and AI development** – data analysis, ML model implementation, and text recognition  
+- **Web development** – front-end (Vue.js / React Native) and back-end (Go / REST APIs)  
+- **Cybersecurity fundamentals** – TryHackMe and HackTheBox learning paths  
+- **Open source collaboration** – publishing academic and course-based projects on GitHub  
 
 ---
 
@@ -49,8 +58,8 @@ I contributed to model testing, evaluation, and performance visualization.
 
 ## Current Learning Goals (2025)
 
-- Complete “Programming for Everybody” (University of Michigan, Coursera)  
-- Earn Meta Front-End Developer Professional Certificate  
+- Complete *Programming for Everybody* (University of Michigan, Coursera)  
+- Earn *Meta Front-End Developer Professional Certificate*  
 - Finish TryHackMe Pre-Security Pathway and begin CTF practice  
 - Build two public AI or cybersecurity-related repositories  
 - Publish one technical article per month on LinkedIn  
@@ -59,8 +68,10 @@ I contributed to model testing, evaluation, and performance visualization.
 
 ## Vision
 
-I aspire to become a security-focused AI engineer, integrating data-driven intelligence with system defense.  
-My long-term goal is to represent Germany in the Cyber Security Challenge (CSCG)  
-and contribute to advancing AI security research in Europe.
+I aspire to become a **security-focused AI engineer**, integrating data-driven intelligence with system defense.  
+My long-term goal is to represent **Germany in the Cyber Security Challenge (CSCG)**  
+and contribute to advancing **AI security research in Europe**.
 
 ---
+
+<p align="center"><i>"Building intelligent systems that protect, not just predict."</i></p>

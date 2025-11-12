@@ -2,7 +2,7 @@
 
 **Computer Science & Artificial Intelligence Student**  
 Sapienza University of Rome | Rome, Italy  
-📧 gioia.zheng1@gmail.com | 🌐 [LinkedIn](https://www.linkedin.com/in/gioia-zheng-9233a0303)
+📧 gioia.zheng.stud@gmail.com | 🌐 [LinkedIn](https://www.linkedin.com/in/gioia-zheng-9233a0303)
 
 ---
 

@@ -56,22 +56,4 @@ I contributed to model testing, evaluation, and performance visualization.
 
 ---
 
-## Current Learning Goals (2025)
-
-- Complete *Programming for Everybody* (University of Michigan, Coursera)  
-- Earn *Meta Front-End Developer Professional Certificate*  
-- Finish TryHackMe Pre-Security Pathway and begin CTF practice  
-- Build two public AI or cybersecurity-related repositories  
-- Publish one technical article per month on LinkedIn  
-
----
-
-## Vision
-
-I aspire to become a **security-focused AI engineer**, integrating data-driven intelligence with system defense.  
-My long-term goal is to represent **Germany in the Cyber Security Challenge (CSCG)**  
-and contribute to advancing **AI security research in Europe**.
-
----
-
 <p align="center"><i>"Building intelligent systems that protect, not just predict."</i></p>

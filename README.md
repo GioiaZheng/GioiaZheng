@@ -8,7 +8,7 @@
 <p align="center">
   <a href="mailto:gioia.zheng.stud@gmail.com">Email</a> ·
   <a href="https://www.linkedin.com/in/gioia-zheng-9233a0303">LinkedIn</a> ·
-  <a href="https://leetcode.com/u/GioiaZheng/">LeetCode</a> ·
+  <a href="https://leetcode.com/u/Joy0x01/">LeetCode</a> ·
   <a href="https://tryhackme.com/p/Joy0x01">TryHackMe</a> ·
   <a href="https://github.com/GioiaZheng">GitHub</a>
 </p>

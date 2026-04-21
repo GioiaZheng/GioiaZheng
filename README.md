@@ -17,78 +17,100 @@ Sapienza University of Rome · Italy
 
 ## Overview
 
-I am an undergraduate student in Applied Computer Science and Artificial Intelligence at Sapienza University of Rome.
+I am an undergraduate student in Applied Computer Science and Artificial Intelligence at Sapienza University of Rome, focused on building **scalable machine learning systems** and **retrieval-driven applications**.
 
-My work focuses on building **practical, production-oriented systems** at the intersection of:
+My work sits at the intersection of:
 
-- Information Retrieval & Search  
-- Machine Learning Systems  
-- Backend Engineering  
+- **Information Retrieval (Search & Ranking)**
+- **Machine Learning Systems**
+- **Backend Engineering**
 
-I am particularly interested in designing **end-to-end pipelines** that integrate retrieval, ranking, and model inference with **scalable and reliable backend infrastructure**.
+I am particularly interested in designing **end-to-end pipelines** that connect retrieval, ranking, and model inference into **production-oriented systems**.
+
+---
+
+## Selected Projects
+
+### 🔍 [Retrieval-Augmented QA System](https://github.com/GioiaZheng/msmarco-genqa)  
+**MS MARCO · BM25 + FAISS + Transformer Reranking**
+
+- Built a hybrid retrieval pipeline combining sparse (BM25) and dense (FAISS) search
+- Implemented transformer-based reranking to improve top-k relevance
+- Designed modular system for indexing, retrieval, and ranking
+- Explored trade-offs between recall, latency, and scalability
+- Structured for extensibility (plug-in retrievers / rerankers)
+
+---
+
+### 💬 [Real-Time Chat System](https://github.com/GioiaZheng/go-chat-system)  
+**Go · REST APIs · Concurrency**
+
+- Developed backend system in Go with concurrent request handling
+- Implemented RESTful APIs for messaging and session management
+- Designed lightweight architecture for real-time communication
+- Focus on performance and system reliability
+
+---
+
+### ✍️ [Handwritten OCR System](https://github.com/GioiaZheng/handwritten-ocr-system)  
+**CNN + LSTM · Sequence Modeling**
+
+- Built OCR pipeline using CNN + LSTM architecture
+
+---
+
+### 📱 [CiboCompass Mobile App](https://github.com/GioiaZheng/CiboCompass)  
+**React Native · Backend Integration · UX Design**
+
+- Developed a cross-platform mobile app for **food discovery in Italy**
+- Designed user interface tailored for **international users navigating local menus**
+- Integrated backend APIs for **data-driven recommendations**
+- Iteratively improved UX based on user feedback and testing
 
 ---
 
 ## Current Work
 
-### Retrieval-Augmented Question Answering (MS MARCO)
-
-- Built a hybrid retrieval pipeline combining **BM25 (sparse)** and **FAISS (dense vector search)**
-- Implemented **transformer-based reranking** for improved relevance
-- Designed modular indexing and retrieval architecture
-- Exploring trade-offs between **retrieval accuracy, latency, and scalability**
-
-### Retrieval-Augmented Generation (RAG)
-
-- Designing and experimenting with **RAG pipelines**
-- Integrating retrieval systems with generation models
-- Investigating how retrieval quality impacts downstream generation
-
-### Engineering & Industry Experience
-
-- Backend development and system design through **industry internship (Idearia)**
-- Experience building **REST APIs and scalable backend services**
-
-### Continuous Training
-
-- Algorithms & data structures (LeetCode practice)
-- Security fundamentals (TryHackMe labs)
-- Systems thinking and backend architecture
+- Developing **Retrieval-Augmented Generation (RAG)** pipelines  
+- Improving **retrieval quality and ranking performance**  
+- Studying **system design for ML-backed applications**  
+- Practicing algorithms and systems (LeetCode)  
+- Hands-on security labs (TryHackMe)
 
 ---
 
 ## Technical Skills
 
-### Programming Languages
+### Programming
 
 - Python · Go · JavaScript · SQL
 
-### Machine Learning & Data Systems
+### Machine Learning & Retrieval
 
 - PyTorch · Scikit-learn · OpenCV  
-- Information Retrieval: **BM25, FAISS**
+- BM25 · FAISS · RAG pipelines
 
-### Backend & Engineering
+### Backend & Systems
 
-- REST APIs · SQLite · Docker · Git  
+- REST APIs · Docker · SQLite · Git  
 - Scalable system design (fundamentals)
 
-### Frontend (Working Knowledge)
+### Frontend
 
 - Vue.js · React Native
 
-### Security Practice
+### Security
 
-- TryHackMe (Pre-Security · Intro to Cyber Security · hands-on labs)
+- TryHackMe (Pre-Security · Intro · Labs)
 
 ---
 
-## Engineering Interests
+## Interests
 
-- Retrieval systems and ranking pipelines  
-- Scalable ML-backed applications  
-- Backend architecture and API design  
-- Secure and reliable software systems  
+- Retrieval systems & ranking pipelines  
+- Scalable ML applications  
+- Backend architecture  
+- Reliable and secure systems  
 
 ---
 
@@ -102,6 +124,6 @@ I am particularly interested in designing **end-to-end pipelines** that integrat
 ---
 
 <p align="center">
-<i>Focused on building robust systems that combine learning-based methods with solid engineering.</i><br>
+<i>Building systems that combine learning-based methods with solid engineering.</i><br>
 🧠 Mensa Member (Top 2% IQ Society)
 </p>

@@ -19,11 +19,11 @@ Sapienza University of Rome · Italy
 
 I am an undergraduate student in Applied Computer Science and Artificial Intelligence at Sapienza University of Rome.
 
-My work focuses on **building practical, production-oriented systems** at the intersection of:
+My work focuses on building **practical, production-oriented systems** at the intersection of:
 
-* **Information Retrieval & Search**
-* **Machine Learning Systems**
-* **Backend Engineering**
+- Information Retrieval & Search  
+- Machine Learning Systems  
+- Backend Engineering  
 
 I am particularly interested in designing **end-to-end pipelines** that integrate retrieval, ranking, and model inference with **scalable and reliable backend infrastructure**.
 
@@ -31,14 +31,29 @@ I am particularly interested in designing **end-to-end pipelines** that integrat
 
 ## Current Work
 
-* Developing an **end-to-end Question Answering system** on the MS MARCO dataset
-  *(BM25 retrieval · FAISS indexing · transformer-based reranking)*
+### Retrieval-Augmented Question Answering (MS MARCO)
 
-* Designing and experimenting with **Retrieval-Augmented Generation (RAG)** pipelines
+- Built a hybrid retrieval pipeline combining **BM25 (sparse)** and **FAISS (dense vector search)**
+- Implemented **transformer-based reranking** for improved relevance
+- Designed modular indexing and retrieval architecture
+- Exploring trade-offs between **retrieval accuracy, latency, and scalability**
 
-* Backend and software engineering experience through **industry internship (Idearia)**
+### Retrieval-Augmented Generation (RAG)
 
-* Continuous training in **algorithms, data structures, and security fundamentals**
+- Designing and experimenting with **RAG pipelines**
+- Integrating retrieval systems with generation models
+- Investigating how retrieval quality impacts downstream generation
+
+### Engineering & Industry Experience
+
+- Backend development and system design through **industry internship (Idearia)**
+- Experience building **REST APIs and scalable backend services**
+
+### Continuous Training
+
+- Algorithms & data structures (LeetCode practice)
+- Security fundamentals (TryHackMe labs)
+- Systems thinking and backend architecture
 
 ---
 
@@ -46,44 +61,47 @@ I am particularly interested in designing **end-to-end pipelines** that integrat
 
 ### Programming Languages
 
-* Python · Go · JavaScript · SQL
+- Python · Go · JavaScript · SQL
 
 ### Machine Learning & Data Systems
 
-* PyTorch · Scikit-learn · OpenCV
-* Information Retrieval *(BM25, FAISS)*
+- PyTorch · Scikit-learn · OpenCV  
+- Information Retrieval: **BM25, FAISS**
 
 ### Backend & Engineering
 
-* REST APIs · SQLite · Docker · Git
-* Scalable system design (fundamentals)
+- REST APIs · SQLite · Docker · Git  
+- Scalable system design (fundamentals)
 
 ### Frontend (Working Knowledge)
 
-* Vue.js · React Native
+- Vue.js · React Native
 
 ### Security Practice
 
-* TryHackMe *(Pre-Security · Intro to Cyber Security · hands-on labs)*
+- TryHackMe (Pre-Security · Intro to Cyber Security · hands-on labs)
 
 ---
 
 ## Engineering Interests
 
-* Retrieval systems and ranking pipelines
-* Scalable ML-backed applications
-* Backend architecture and API design
-* Secure and reliable software systems
+- Retrieval systems and ranking pipelines  
+- Scalable ML-backed applications  
+- Backend architecture and API design  
+- Secure and reliable software systems  
 
 ---
 
 ## Languages
 
-* English (Fluent)
-* Italian (Native)
-* Chinese (Native)
-* German (Beginner)
+- English (Fluent)  
+- Italian (Native)  
+- Chinese (Native)  
+- German (Beginner)  
 
 ---
 
-<p align="center"><i>Focused on building robust systems that combine learning-based methods with solid engineering.</i></p>
+<p align="center">
+<i>Focused on building robust systems that combine learning-based methods with solid engineering.</i><br>
+🧠 Mensa Member (Top 2% IQ Society)
+</p>

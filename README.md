@@ -8,6 +8,7 @@ Sapienza University of Rome · Italy
 <p align="center">
 <a href="mailto:gioia.zheng.stud@gmail.com">Email</a> ·
 <a href="https://www.linkedin.com/in/gioia-zheng-9233a0303">LinkedIn</a> ·
+<a href="cv/Zheng_Gioia_cv.pdf">Resume</a> ·
 <a href="https://leetcode.com/u/Joy0x01/">LeetCode</a> ·
 <a href="https://tryhackme.com/p/Joy0x01">TryHackMe</a> ·
 <a href="https://github.com/GioiaZheng">GitHub</a>
@@ -17,65 +18,59 @@ Sapienza University of Rome · Italy
 
 ## Overview
 
-I am an undergraduate student in Applied Computer Science and Artificial Intelligence at Sapienza University of Rome, focused on building **scalable machine learning systems** and **retrieval-driven applications**.
+Undergraduate at Sapienza University of Rome, working on **scalable machine learning systems** and **retrieval-driven applications** at the intersection of:
 
-My work sits at the intersection of:
+- **Information Retrieval** — search and ranking
+- **Machine Learning Systems** — training, evaluation, serving
+- **Backend Engineering** — APIs, data flow, system design
 
-- **Information Retrieval (Search & Ranking)**
-- **Machine Learning Systems**
-- **Backend Engineering**
-
-I am particularly interested in designing **end-to-end pipelines** that connect retrieval, ranking, and model inference into **production-oriented systems**.
+*Open to research collaborations and full-time roles in Search/IR, ML Systems, or Backend (Italy / EU / remote).*
 
 ---
 
 ## Selected Projects
 
-### 🔍 [Retrieval-Augmented QA System](https://github.com/GioiaZheng/msmarco-genqa)  
+### [Retrieval-Augmented QA System](https://github.com/GioiaZheng/msmarco-genqa)  
 **MS MARCO · BM25 + FAISS + Transformer Reranking**
 
-- Built a hybrid retrieval pipeline combining sparse (BM25) and dense (FAISS) search
-- Implemented transformer-based reranking to improve top-k relevance
-- Designed modular system for indexing, retrieval, and ranking
-- Explored trade-offs between recall, latency, and scalability
-- Structured for extensibility (plug-in retrievers / rerankers)
+- Hybrid retrieval combining sparse (BM25) and dense (FAISS) search
+- Transformer-based reranking to improve top-k relevance
+- Paired-bootstrap CI for measuring rerank lift vs. BM25 baseline
 
 ---
 
-### 💬 [Real-Time Chat System](https://github.com/GioiaZheng/go-chat-system)  
+### [CiboCompass Mobile App](https://github.com/GioiaZheng/CiboCompass)  
+**React Native · Go · SQLite**
+
+- Cross-platform mobile app for international students navigating Italian restaurant menus
+- Offline-first rating system with local cache and backend sync
+- Go REST API with SQLite persistence
+
+---
+
+### [Real-Time Chat System](https://github.com/GioiaZheng/go-chat-system)  
 **Go · REST APIs · Concurrency**
 
-- Developed backend system in Go with concurrent request handling
-- Implemented RESTful APIs for messaging and session management
-- Designed lightweight architecture for real-time communication
-- Focus on performance and system reliability
+- Go backend with concurrent request handling
+- REST APIs for messaging and session management, documented in OpenAPI
+- Vue.js frontend embedded into the Go binary at build time
 
 ---
 
-### ✍️ [Handwritten OCR System](https://github.com/GioiaZheng/handwritten-ocr-system)  
-**CNN + LSTM · Sequence Modeling**
+### [Handwritten OCR System](https://github.com/GioiaZheng/handwritten-ocr-system)  
+**PyTorch · CNN + LSTM · CTC**
 
-- Built OCR pipeline using CNN + LSTM architecture
-
----
-
-### 📱 [CiboCompass Mobile App](https://github.com/GioiaZheng/CiboCompass)  
-**React Native · Backend Integration · UX Design**
-
-- Developed a cross-platform mobile app for **food discovery in Italy**
-- Designed user interface tailored for **international users navigating local menus**
-- Integrated backend APIs for **data-driven recommendations**
-- Iteratively improved UX based on user feedback and testing
+- End-to-end OCR pipeline trained on the IAM handwriting dataset
+- CNN feature extractor with bidirectional LSTM sequence modeling and CTC alignment
+- Evaluated with CER and WER on held-out splits
 
 ---
 
 ## Current Work
 
-- Developing **Retrieval-Augmented Generation (RAG)** pipelines  
-- Improving **retrieval quality and ranking performance**  
-- Studying **system design for ML-backed applications**  
-- Practicing algorithms and systems (LeetCode)  
-- Hands-on security labs (TryHackMe)
+- Building a **regression-failure taxonomy** for RAG evaluation (BM25 vs. reranked, with paired-bootstrap CI)
+- Adding **BERTScore as a semantic-proxy metric** on top of exact-match for generation quality
+- Designing reproducible evaluation pipelines for ML-backed retrieval systems
 
 ---
 
@@ -92,25 +87,15 @@ I am particularly interested in designing **end-to-end pipelines** that connect 
 
 ### Backend & Systems
 
-- REST APIs · Docker · SQLite · Git  
-- Scalable system design (fundamentals)
+- REST APIs · Docker · SQLite · Git
 
 ### Frontend
 
 - Vue.js · React Native
 
-### Security
+### Automation & CMS
 
-- TryHackMe (Pre-Security · Intro · Labs)
-
----
-
-## Interests
-
-- Retrieval systems & ranking pipelines  
-- Scalable ML applications  
-- Backend architecture  
-- Reliable and secure systems  
+- n8n · WordPress
 
 ---
 
@@ -124,6 +109,6 @@ I am particularly interested in designing **end-to-end pipelines** that connect 
 ---
 
 <p align="center">
-<i>Building systems that combine learning-based methods with solid engineering.</i><br>
-🧠 Mensa Member (Top 2% IQ Society)
+<sub>Mensa Italia member</sub>
 </p>
+

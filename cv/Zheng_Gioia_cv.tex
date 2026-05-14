@@ -1,0 +1,139 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=0.65in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{array}
+
+\setlist[itemize]{itemsep=0pt, topsep=1pt, parsep=0pt, partopsep=0pt, leftmargin=1.2em}
+
+\titleformat{\section}
+  {\normalsize\bfseries}
+  {}
+  {0em}
+  {}[\vspace{-4pt}\rule{\linewidth}{0.5pt}]
+
+\titlespacing{\section}{0pt}{6pt}{-2pt}
+
+\linespread{0.95}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% ===== helpers =====
+\newcommand{\resheading}[1]{\section*{#1}}
+
+\newcommand{\resitem}[2]{
+  \vspace{3pt}
+  \noindent\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{#1} & #2 \\
+  \end{tabular*}
+}
+
+\newcommand{\ressubitem}[1]{
+  \noindent\textit{#1}\par\vspace{-1pt}
+}
+
+\newcommand{\skillrow}[2]{
+  \begin{tabular*}{\textwidth}{@{}>{\bfseries}p{0.20\textwidth}@{\extracolsep{\fill}}p{0.76\textwidth}@{}}
+    #1 & #2 \\
+  \end{tabular*}
+}
+
+\begin{document}
+
+% ===== Header =====
+\begin{center}
+    {\Large \textbf{Gioia Zheng}} \\[2pt]
+    Rome, Italy \quad | \quad
+    \href{mailto:gioia.zheng.stud@gmail.com}{gioia.zheng.stud@gmail.com} \quad | \quad
+    \href{https://www.linkedin.com/in/gioia-zheng-9233a0303}{linkedin.com/in/gioia-zheng-9233a0303} \\[1pt]
+    \href{https://github.com/GioiaZheng}{github.com/GioiaZheng}
+\end{center}
+
+\vspace{-8pt}
+
+% ===== Profile =====
+\resheading{Profile}
+Bachelor's student in Applied Computer Science and Artificial Intelligence at Sapienza University of Rome,
+focused on \textbf{Information Retrieval}, \textbf{Retrieval-Augmented Generation}, and \textbf{scalable backend systems}.
+Comfortable across the stack --- from sparse/dense retrieval pipelines and reranking to API design and reproducible evaluation infrastructure.
+
+% ===== Education =====
+\resheading{Education}
+\resitem{Sapienza University of Rome}{Sep 2022 -- Present}
+B.Sc.\ in Applied Computer Science and Artificial Intelligence
+
+% ===== Experience =====
+\resheading{Experience}
+
+\resitem{NLP Research Intern}{Feb 2026 -- Present}
+\ressubitem{Microsoft (Remote)}
+\begin{itemize}
+    \item Built an open-domain retrieval-augmented QA pipeline on MS MARCO combining sparse (BM25) and dense (FAISS) retrieval with cross-encoder reranking
+    \item Designed an evaluation framework with \textbf{paired-bootstrap confidence intervals over 6{,}980 dev queries}, quantifying reranker lift over the BM25 baseline at the question level
+    \item Introduced \textbf{BERTScore as a semantic-proxy metric} on top of exact-match for generation quality, and a regression-failure taxonomy for systematic error analysis
+    \item Built resume-safe runner infrastructure and CI for reproducible long-running indexing and evaluation jobs
+\end{itemize}
+
+\resitem{Web Development Intern}{Mar 2026 -- Present}
+\ressubitem{Idearia, Rome, Italy}
+\begin{itemize}
+    \item Developed and maintained PHP/WordPress backend systems for client-facing websites
+    \item Designed n8n automation workflows to integrate WordPress content and forms with external services
+\end{itemize}
+
+\resitem{Programming Intern}{May 2021 -- Jun 2021}
+\ressubitem{Sandbox S.r.l., Italy}
+\begin{itemize}
+    \item Contributed to a 3D simulation platform and backend tooling
+\end{itemize}
+
+% ===== Projects =====
+\resheading{Projects}
+
+\resitem{Retrieval-Augmented QA System}{\href{https://github.com/GioiaZheng/msmarco-genqa}{github.com/GioiaZheng/msmarco-genqa}}
+\begin{itemize}
+    \item Open-source RAG retrieval pipeline; modular architecture supporting plug-in retrievers and rerankers
+    \item Reproducible CI, resume-safe runners, and packaging for long-running indexing/evaluation experiments
+    \item Stack: Python, PyTorch, FAISS, Hugging Face Transformers, scikit-learn
+\end{itemize}
+
+\resitem{Full-Stack Chat System}{\href{https://github.com/GioiaZheng/go-chat-system}{github.com/GioiaZheng/go-chat-system}}
+\begin{itemize}
+    \item Full-stack chat application; Go backend with concurrent request handling and SQLite persistence
+    \item REST APIs documented in OpenAPI; Vue.js frontend embedded into the Go binary at build time for single-artifact deployment
+\end{itemize}
+
+\resitem{CiboCompass Mobile App}{\href{https://github.com/GioiaZheng/CiboCompass}{github.com/GioiaZheng/CiboCompass}}
+\begin{itemize}
+    \item Cross-platform React Native app helping international students navigate Italian restaurant menus
+    \item Offline-first rating system with local cache and backend sync; Go REST API with SQLite persistence
+\end{itemize}
+
+\resitem{Handwritten OCR System}{\href{https://github.com/GioiaZheng/handwritten-ocr-system}{github.com/GioiaZheng/handwritten-ocr-system}}
+\begin{itemize}
+    \item End-to-end handwritten OCR pipeline in PyTorch on the IAM handwriting dataset
+    \item CNN feature extractor with bidirectional LSTM and CTC alignment for variable-length transcription; evaluated with CER and WER on held-out splits
+\end{itemize}
+
+% ===== Skills =====
+\resheading{Skills}
+\vspace{2pt}
+\skillrow{Programming}{Python, Go, JavaScript, PHP, Java, SQL}
+\skillrow{ML \& NLP}{PyTorch, Hugging Face Transformers, RAG, Deep Learning}
+\skillrow{Information Retrieval}{BM25, FAISS, sparse + dense retrieval, cross-encoder reranking, BERTScore, paired-bootstrap evaluation}
+\skillrow{Backend \& Systems}{REST APIs, OpenAPI, SQLite, system design, WordPress}
+\skillrow{Tools}{Git, Docker, Linux, GitHub Actions, n8n}
+\skillrow{Languages}{English (Professional), Italian (Bilingual), Chinese (Native), German (Beginner)}
+
+% ===== Additional =====
+\resheading{Additional}
+\vspace{2pt}
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+WISWUP --- 1st Place & Sep 2021 \\
+Mensa Italia Member & Dec 2025 -- Present \\
+\end{tabular*}
+
+\end{document}

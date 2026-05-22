@@ -56,9 +56,8 @@
 
 % ===== Profile =====
 \resheading{Profile}
-Bachelor's student in Applied Computer Science and Artificial Intelligence at Sapienza University of Rome,
-focused on \textbf{Information Retrieval}, \textbf{Retrieval-Augmented Generation}, and \textbf{scalable backend systems}.
-Comfortable across the stack --- from sparse/dense retrieval pipelines and reranking to API design and reproducible evaluation infrastructure.
+Bachelor's student in Applied Computer Science and Artificial Intelligence at Sapienza University of Rome.
+Focused on \textbf{information retrieval}, \textbf{retrieval-augmented generation (RAG)}, and \textbf{reproducible ML evaluation}.
 
 % ===== Education =====
 \resheading{Education}
@@ -68,13 +67,14 @@ B.Sc.\ in Applied Computer Science and Artificial Intelligence
 % ===== Experience =====
 \resheading{Experience}
 
-\resitem{NLP Research Intern}{Feb 2026 -- Present}
-\ressubitem{Microsoft (Remote)}
+\resitem{NLP Algorithm Engineer Intern}{Feb 2026 -- May 2026}
+\ressubitem{Microsoft --- Natural Language Computing (Remote)}
 \begin{itemize}
-    \item Built an open-domain retrieval-augmented QA pipeline on MS MARCO combining sparse (BM25) and dense (FAISS) retrieval with cross-encoder reranking
-    \item Designed an evaluation framework with \textbf{paired-bootstrap confidence intervals over 6{,}980 dev queries}, quantifying reranker lift over the BM25 baseline at the question level
-    \item Introduced \textbf{BERTScore as a semantic-proxy metric} on top of exact-match for generation quality, and a regression-failure taxonomy for systematic error analysis
-    \item Built resume-safe runner infrastructure and CI for reproducible long-running indexing and evaluation jobs
+    \item Built an end-to-end retrieval-augmented QA pipeline on MS MARCO: BM25 + dense (SBERT/FAISS) retrieval, cross-encoder reranking, T5 generation, paired-bootstrap evaluation
+    \item \textbf{Cross-encoder reranking of dense top-100 doubled generation Token-F1 (0.197 $\to$ 0.368)} on full dev/small (6{,}980 queries); 95\% paired-bootstrap CIs on all four surface-form $\Delta$s strictly above 0
+    \item DistilBERT BERTScore proxy on 3{,}000 paired examples confirmed the gain is not a surface-form artefact ($\Delta$ +0.173); a deterministic failure taxonomy traced ${\sim}$90\% of regressions to generator-side truncation, not retrieval failure
+    \item Surfaced an NLI-entailment $\Delta$ sign reversal ($-0.145$) --- the only metric in the pipeline whose paired $\Delta$ reverses sign --- motivating a generator-capacity follow-up rather than a decode-budget fix
+    \item Reproducibility scaffolding: per-run manifest (git SHA, config hash, dependency-file hashes, env fingerprint), lockfile, 286 unit tests, CI on every push
 \end{itemize}
 
 \resitem{Web Development Intern}{Mar 2026 -- Present}
@@ -92,13 +92,6 @@ B.Sc.\ in Applied Computer Science and Artificial Intelligence
 
 % ===== Projects =====
 \resheading{Projects}
-
-\resitem{Retrieval-Augmented QA System}{\href{https://github.com/GioiaZheng/msmarco-genqa}{github.com/GioiaZheng/msmarco-genqa}}
-\begin{itemize}
-    \item Open-source RAG retrieval pipeline; modular architecture supporting plug-in retrievers and rerankers
-    \item Reproducible CI, resume-safe runners, and packaging for long-running indexing/evaluation experiments
-    \item Stack: Python, PyTorch, FAISS, Hugging Face Transformers, scikit-learn
-\end{itemize}
 
 \resitem{Full-Stack Chat System}{\href{https://github.com/GioiaZheng/go-chat-system}{github.com/GioiaZheng/go-chat-system}}
 \begin{itemize}
@@ -121,11 +114,11 @@ B.Sc.\ in Applied Computer Science and Artificial Intelligence
 % ===== Skills =====
 \resheading{Skills}
 \vspace{2pt}
-\skillrow{Programming}{Python, Go, JavaScript, PHP, Java, SQL}
+\skillrow{Programming}{Python, Go, JavaScript, PHP, SQL}
 \skillrow{ML \& NLP}{PyTorch, Hugging Face Transformers, RAG, Deep Learning}
-\skillrow{Information Retrieval}{BM25, FAISS, sparse + dense retrieval, cross-encoder reranking, BERTScore, paired-bootstrap evaluation}
-\skillrow{Backend \& Systems}{REST APIs, OpenAPI, SQLite, system design, WordPress}
-\skillrow{Tools}{Git, Docker, Linux, GitHub Actions, n8n}
+\skillrow{Information Retrieval}{BM25, FAISS, sparse + dense retrieval, cross-encoder reranking, BERTScore, NLI grounding, paired-bootstrap evaluation}
+\skillrow{Backend \& Systems}{REST APIs, OpenAPI, SQLite, concurrent backend (Go), system design}
+\skillrow{Tools}{Git, Docker, Linux, GitHub Actions}
 \skillrow{Languages}{English (Professional), Italian (Bilingual), Chinese (Native), German (Beginner)}
 
 % ===== Additional =====
@@ -133,7 +126,6 @@ B.Sc.\ in Applied Computer Science and Artificial Intelligence
 \vspace{2pt}
 \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
 WISWUP --- 1st Place & Sep 2021 \\
-Mensa Italia Member & Dec 2025 -- Present \\
 \end{tabular*}
 
 \end{document}

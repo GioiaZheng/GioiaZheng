@@ -69,11 +69,9 @@ Focus on full-pipeline construction (sparse + dense retrieval, reranking, genera
 
 % ===== Education =====
 \resheading{Education}
-\resitem{Sapienza University of Rome}{Sep 2022 -- \todomark{expected graduation}}
+\resitem{Sapienza University of Rome}{Sep 2022 -- Present}
 B.Sc.\ in Applied Computer Science and Artificial Intelligence \\
-Weighted average: \todomark{e.g. 28/30} \\
-Relevant coursework: \todomark{4--6 items, e.g. Machine Learning, Algorithms, Information Retrieval, Statistics, Distributed Systems} \\
-Thesis: \todomark{topic if defined; otherwise omit this line}
+Relevant coursework: \todomark{4--6 items, e.g. Machine Learning, Algorithms, Information Retrieval, Statistics, Distributed Systems}
 
 % ===== Experience =====
 \resheading{Experience}
@@ -99,16 +97,20 @@ Thesis: \todomark{topic if defined; otherwise omit this line}
     \item End-to-end training and inference scripts; thin web front-end for interactive evaluation.
 \end{itemize}
 
+\resitem{LeetCode solutions and pattern notes}{\href{https://github.com/GioiaZheng/Leetcode-Solutions}{github.com/GioiaZheng/Leetcode-Solutions}}
+\ressubitem{Python --- GitHub Actions CI}
+\begin{itemize}
+    \item 98 solved problems, one per directory, with schema-validated metadata (id, difficulty, topics, status) regenerated into a topic index and a catalog on every push; CI fails if the generated docs drift out of sync.
+    \item Pattern notes (sliding window, prefix sums, monotonic stack, dynamic programming, graphs, etc.) with cross-references to the corresponding problem directories.
+    \item Quality pipeline: ruff lint, pytest on a curated subset, structural validation, multi-Python-version CI (3.11 / 3.12).
+\end{itemize}
+
 \resitem{Chat service}{\href{https://github.com/GioiaZheng/go-chat-system}{github.com/GioiaZheng/go-chat-system}}
 \ressubitem{Go (concurrent backend) + Vue + SQLite}
 \begin{itemize}
     \item REST API documented under OpenAPI; Vue frontend embedded into the Go binary at build time for single-artifact deployment.
     \item Concurrent request handling with SQLite persistence; CI on every push (gofmt, go-vet, tests, OpenAPI lint, frontend build).
 \end{itemize}
-
-\resitem{\todomark{third project: retrieval / evaluation / infra-oriented}}{}
-\ressubitem{}
-\todomark{candidate scopes --- a small FAISS demo with a published HF dataset card; a Pyserini-comparable BM25 baseline; a small open-source PR to ir-measures / pyserini / sentence-transformers}
 
 % ===== Open-source / writing =====
 \resheading{Open-source / Writing}

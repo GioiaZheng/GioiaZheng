@@ -6,7 +6,7 @@
 
 \documentclass[10pt,a4paper]{article}
 
-\usepackage[margin=0.65in]{geometry}
+\usepackage[top=0.5in,bottom=0.55in,left=0.6in,right=0.6in]{geometry}
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
 \usepackage{titlesec}
@@ -20,9 +20,9 @@
   {0em}
   {}[\vspace{-4pt}\rule{\linewidth}{0.5pt}]
 
-\titlespacing{\section}{0pt}{6pt}{-2pt}
+\titlespacing{\section}{0pt}{4pt}{-3pt}
 
-\linespread{0.95}
+\linespread{0.93}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
@@ -64,14 +64,14 @@
 
 % ===== Profile =====
 \resheading{Profile}
-Undergraduate at Sapienza University of Rome working on retrieval and evaluation systems for retrieval-augmented generation.
-Focus on full-pipeline construction (sparse + dense retrieval, reranking, generation), paired-bootstrap evaluation methodology, and reproducibility scaffolding.
+Undergraduate at Sapienza University of Rome. Building MS MARCO retrieval-augmented QA end-to-end on a single 6-core CPU machine --- BM25, dense (SBERT/FAISS), cross-encoder rerank, T5 generation --- with paired-bootstrap CIs, NLI-entailment grounding, and a regression failure taxonomy. Interested in the gap between surface-form and semantic-faithfulness metrics in RAG evaluation.
 
 % ===== Education =====
 \resheading{Education}
 \resitem{Sapienza University of Rome}{Sep 2022 -- Present}
-B.Sc.\ in Applied Computer Science and Artificial Intelligence \\
-Relevant coursework: \todomark{4--6 items, e.g. Machine Learning, Algorithms, Information Retrieval, Statistics, Distributed Systems}
+B.Sc.\ in Applied Computer Science and Artificial Intelligence
+% Coursework intentionally omitted until filled in with real entries — rendering a TODO box is worse than omitting.
+% Suggested 4–6 items once available, e.g.: Machine Learning, Information Retrieval, Algorithms, Statistics, Distributed Systems.
 
 % ===== Experience =====
 \resheading{Experience}
@@ -79,49 +79,55 @@ Relevant coursework: \todomark{4--6 items, e.g. Machine Learning, Algorithms, In
 \resitem{NLP Algorithm Engineer Intern}{Feb 2026 -- May 2026}
 \ressubitem{Microsoft --- Natural Language Computing (Remote)}
 \begin{itemize}
-    \item \textbf{Token-F1 0.197 $\to$ 0.368} on MS MARCO dev/small (6{,}980 queries) by adding a cross-encoder reranker over dense top-100; 95\% paired-bootstrap CIs on all four surface-form $\Delta$s strictly above 0.
-    \item Built the end-to-end pipeline: BM25 and dense (SBERT/FAISS) retrieval, cross-encoder reranking, T5 generation, paired-bootstrap evaluation harness.
-    \item \textbf{$+0.173$ DistilBERT-BERTScore $\Delta$} on 3{,}000 paired examples ruled out a surface-form artefact; deterministic failure taxonomy attributed \textbf{${\sim}$90\% of regressions to generator-side truncation}, not retrieval failure.
-    \item \textbf{NLI-entailment $\Delta$ sign reversal ($-0.145$)} --- the only metric in the pipeline whose paired $\Delta$ reverses sign --- flagged as evidence for generator-capacity follow-up rather than decode-budget tuning.
-    \item Reproducibility scaffolding: per-run manifest (git SHA, config hash, dependency-file hashes, environment fingerprint), pinned lockfile, 286-test pytest suite, CI on every push.
+    \item Headline result on MS MARCO \texttt{dev/small} (6{,}980 queries, 8.8M-passage corpus): replacing BM25 first-stage with dense top-100 reranked by a cross-encoder, same frozen T5-small generator, lifted Token-F1 \textbf{0.197 $\to$ 0.368} and ROUGE-L \textbf{0.193 $\to$ 0.368}. 95\% paired-bootstrap CIs on per-query $\Delta$ (10k resamples, seed 42) strictly above 0 across all four surface-form metrics.
+    \item Pipeline I built and own end-to-end: \texttt{bm25s} sparse (MRR@10 0.170, in line with Anserini's 0.184; gap consistent with tokenizer differences), dense \texttt{all-MiniLM-L6-v2} over a FAISS \texttt{IndexFlatIP} on L2-normalised embeddings, \texttt{cross-encoder/ms-marco-MiniLM-L-6-v2} over the dense top-100 (538k pairs at ${\sim}32$ pairs/s, 4h37m wall-clock on 6 cores), T5-small generation.
+    \item Ruled out a surface-form artefact with a DistilBERT-BERTScore proxy on 3{,}000 paired qids: semantic-proxy $\Delta$ \textbf{$+0.173$} sits within 0.002 of the surface-form Token-F1 $\Delta$, well inside encoder noise. Chose DistilBERT over canonical \texttt{roberta-large} as an explicit CPU-cost vs.\ signal tradeoff, documented in the report.
+    \item 40-query deterministic-rule triage of the 233-query regression bucket: \textbf{${\sim}$90\% of regressions are generator-side truncation} (mid-word or $\le 3$-token outputs), not retrieval failure. Falsified the decode-budget reading by re-running full \texttt{dev/small} at \texttt{max\_new\_tokens=64$\to$128}: truncation share moved 90\% $\to$ 87.5\%, all four rerank $\Delta$s moved $<0.005$. The output style is intrinsic to T5-small on this prompt format, not a budget symptom.
+    \item NLI-entailment grounding (\texttt{cross-encoder/nli-deberta-v3-small}, 3{,}000-pair subsample) is the only metric whose paired $\Delta$ reverses sign: \textbf{$-0.145$} (95\% CI $[-0.16,\,-0.13]$, $p<0.001$). Hypothesis: fragmentary mid-word outputs that inflate token overlap cannot be entailed by a sentence-level NLI cross-encoder. Flagged as a generator-swap follow-up rather than a regression to roll back.
+    \item Reproducibility scaffold: per-run manifest (git SHA, config hash, dependency-file hashes, environment fingerprint), pinned \texttt{requirements-lock.txt}, ${\sim}295$-test \texttt{pytest} suite, CI on every push, batch-eval design with no hidden one-shot CLI.
 \end{itemize}
 
 % ===== Projects =====
 \resheading{Projects}
 
 \resitem{Handwritten OCR pipeline}{\href{https://github.com/GioiaZheng/handwritten-ocr-system}{github.com/GioiaZheng/handwritten-ocr-system}}
-\ressubitem{PyTorch --- CNN + BiLSTM + CTC}
+\ressubitem{PyTorch --- residual CNN + BiLSTM + CTC, IAM dataset}
 \begin{itemize}
-    \item Variable-length transcription pipeline on the IAM handwriting dataset: CNN feature extractor, BiLSTM encoder, CTC decoder.
-    \item Train / dev / test split with held-out evaluation reporting CER and WER; numbers comparable across architecture sweeps.
-    \item End-to-end training and inference scripts; thin web front-end for interactive evaluation.
+    \item CRNN for variable-length handwritten line transcription: 9 residual conv blocks (32$\to$128 channels, batchnorm + leaky-ReLU + dropout 0.2), 2 stacked BiLSTM layers (hidden 256 / 64), linear head over vocab + CTC blank.
+    \item Training and held-out evaluation with per-batch CER and WER (\texttt{torchmetrics}) streamed to TensorBoard; greedy CTC decode at inference; preprocessing pipeline (grayscale, normalisation, augmentation).
 \end{itemize}
 
 \resitem{LeetCode solutions and pattern notes}{\href{https://github.com/GioiaZheng/Leetcode-Solutions}{github.com/GioiaZheng/Leetcode-Solutions}}
-\ressubitem{Python --- GitHub Actions CI}
+\ressubitem{Python --- schema-validated repo, GitHub Actions CI}
 \begin{itemize}
-    \item 98 solved problems, one per directory, with schema-validated metadata (id, difficulty, topics, status) regenerated into a topic index and a catalog on every push; CI fails if the generated docs drift out of sync.
-    \item Pattern notes (sliding window, prefix sums, monotonic stack, dynamic programming, graphs, etc.) with cross-references to the corresponding problem directories.
-    \item Quality pipeline: ruff lint, pytest on a curated subset, structural validation, multi-Python-version CI (3.11 / 3.12).
+    \item 98 problems, one directory each, with per-problem metadata (id, difficulty, topics, status) validated against a JSON schema. Topic index and catalog regenerated on every push; CI fails if the generated docs drift out of sync with the source metadata.
+    \item Quality gate on every push: \texttt{ruff} lint, \texttt{pytest} on a curated subset, structural validation, matrix CI on Python 3.11 and 3.12.
 \end{itemize}
 
 \resitem{Chat service}{\href{https://github.com/GioiaZheng/go-chat-system}{github.com/GioiaZheng/go-chat-system}}
-\ressubitem{Go (concurrent backend) + Vue + SQLite}
+\ressubitem{Go backend + Vue frontend + SQLite}
 \begin{itemize}
-    \item REST API documented under OpenAPI; Vue frontend embedded into the Go binary at build time for single-artifact deployment.
-    \item Concurrent request handling with SQLite persistence; CI on every push (gofmt, go-vet, tests, OpenAPI lint, frontend build).
+    \item Go REST backend with SQLite for single-writer durability; Vue frontend embedded into the Go binary at build time so the service ships as one static artifact.
+    \item OpenAPI schema checked in CI; per-push matrix: \texttt{gofmt}, \texttt{go vet}, unit tests, OpenAPI lint, frontend build.
 \end{itemize}
 
 % ===== Open-source / writing =====
-\resheading{Open-source / Writing}
-\vspace{2pt}
-\todomark{one or two entries --- e.g. a methodology blog post on surface-form vs.\ NLI-entailment disagreement in RAG evaluation; a HuggingFace dataset card; an issue or PR against pyserini / ir-measures / BEIR / sentence-transformers}
+% Section intentionally hidden from PDF until at least one verifiable entry exists.
+% Strong candidates once available: a methodology write-up on surface-form vs NLI-entailment
+% disagreement in RAG evaluation; a HuggingFace dataset card for the MS MARCO genqa outputs;
+% an issue or PR against pyserini / ir-measures / BEIR / sentence-transformers / bm25s.
+%
+% \resheading{Open-source / Writing}
+% \vspace{2pt}
+% \begin{itemize}
+%     \item ...
+% \end{itemize}
 
 % ===== Skills =====
 \resheading{Skills}
 \vspace{2pt}
-\skillrow{Primary}{Python, PyTorch, BM25, FAISS, sentence-transformers, cross-encoder reranking, paired-bootstrap evaluation, NLI grounding, BERTScore}
-\skillrow{Working}{Go (concurrent backends), Docker, Linux, GitHub Actions CI, OpenAPI, SQLite}
+\skillrow{Primary}{Python, PyTorch, \texttt{bm25s}, FAISS, sentence-transformers, cross-encoder reranking, paired-bootstrap CIs, BERTScore / NLI-entailment grounding, pytest}
+\skillrow{Working}{Go, Docker, Linux, GitHub Actions CI, OpenAPI, SQLite, LaTeX}
 \skillrow{Familiar}{JavaScript / React Native, Vue}
 \skillrow{Languages}{English (Professional), Italian (Bilingual), Chinese (Native), German (Beginner)}
 

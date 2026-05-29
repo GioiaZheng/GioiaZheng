@@ -16,9 +16,9 @@ Sapienza University of Rome · Italy
 
 ## Overview
 
-Undergraduate at Sapienza University of Rome focused on information retrieval, retrieval-augmented generation, and reproducible ML systems.
+Undergraduate at Sapienza University of Rome building reproducible retrieval and evaluation systems for large-scale QA pipelines.
 
-*Open to research collaborations and full-time roles in Search / IR, ML systems, or backend (Italy / EU / remote).*
+*Interested in research-engineering problems at the intersection of information retrieval, evaluation methodology, and AI infrastructure.*
 
 ---
 

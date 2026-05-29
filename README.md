@@ -9,7 +9,7 @@ Sapienza University of Rome · Italy
 <a href="https://gioiazheng.github.io">Website</a> ·
 <a href="mailto:gioia.zheng.stud@gmail.com">Email</a> ·
 <a href="https://www.linkedin.com/in/gioia-zheng-9233a0303">LinkedIn</a> ·
-<a href="cv/Zheng_Gioia_cv.pdf">Resume</a>
+<a href="cv/Gioia_Zheng_cv.pdf">Resume</a>
 </p>
 
 ---

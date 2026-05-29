@@ -43,7 +43,7 @@
 }
 
 \newcommand{\skillrow}[2]{
-  \begin{tabular*}{\textwidth}{@{}p{0.19\textwidth}@{\extracolsep{\fill}}p{0.77\textwidth}@{}}
+  \begin{tabular*}{\textwidth}{@{}p{0.21\textwidth}@{\extracolsep{\fill}}p{0.75\textwidth}@{}}
     \textbf{#1} & #2 \\
   \end{tabular*}
 }
@@ -73,24 +73,24 @@ B.Sc. in Applied Computer Science and Artificial Intelligence
 \resitem{MS MARCO Generative QA System}{\href{https://github.com/GioiaZheng/msmarco-genqa}{github.com/GioiaZheng/msmarco-genqa}}
 \ressubitem{Python --- Retrieval, Reranking, Generation, Evaluation}
 \begin{itemize}
-\item Built an end-to-end retrieve $\rightarrow$ rerank $\rightarrow$ generate pipeline on MS MARCO (6,980 queries, 8.8M passages), improving Token-F1 from 0.197 to 0.368 on a frozen T5-small generator.
-\item Implemented sparse BM25 retrieval, dense retrieval with SBERT/FAISS, cross-encoder reranking, and T5 generation.
-\item Developed reproducibility infrastructure including experiment manifests, CI workflows, and automated evaluation pipelines.
-\item Investigated disagreement between surface-form metrics and NLI-based grounding signals through regression and failure analysis.
+\item Built an end-to-end retrieve $\rightarrow$ rerank $\rightarrow$ generate pipeline on MS MARCO (6,980 queries, 8.8M passages), improving Token-F1 from 0.197 to 0.368.
+\item Reproduced sparse, dense, and cross-encoder retrieval stages on CPU-only infrastructure using BM25, SBERT/FAISS, and MiniLM reranking.
+\item Built automated evaluation and reproducibility tooling including CI, experiment manifests, and benchmark reporting.
+\item Analyzed disagreement between lexical and semantic grounding metrics, revealing evaluation inconsistencies in generated QA outputs.
 \end{itemize}
 
 \resitem{Handwritten OCR Pipeline}{\href{https://github.com/GioiaZheng/handwritten-ocr-system}{github.com/GioiaZheng/handwritten-ocr-system}}
 \ressubitem{PyTorch --- CRNN, BiLSTM, CTC}
 \begin{itemize}
-\item Implemented a handwritten text recognition system using residual CNN layers, BiLSTM sequence modeling, and CTC decoding.
-\item Built training and evaluation workflows with CER/WER tracking, TensorBoard logging, and preprocessing pipelines.
+\item Designed and trained a CRNN-based handwritten text recognition system combining residual CNN feature extraction, BiLSTM sequence modeling, and CTC decoding.
+\item Implemented end-to-end training, evaluation, and monitoring pipelines with CER/WER tracking and TensorBoard instrumentation.
 \end{itemize}
 
 \resitem{Chat Service}{\href{https://github.com/GioiaZheng/go-chat-system}{github.com/GioiaZheng/go-chat-system}}
 \ressubitem{Go Backend + Vue Frontend + SQLite}
 \begin{itemize}
-\item Developed a REST-based chat service with SQLite persistence and a Vue frontend bundled into a single deployable binary.
-\item Integrated CI validation including testing, OpenAPI verification, formatting, and frontend build checks.
+\item Developed a self-contained chat platform with Go backend, Vue frontend, and SQLite persistence packaged as a single deployable artifact.
+\item Established automated quality gates including OpenAPI validation, testing, and CI-based build verification.
 \end{itemize}
 
 \resheading{Experience}
@@ -110,11 +110,19 @@ B.Sc. in Applied Computer Science and Artificial Intelligence
 \item Conducted reproducibility, grounding, and failure-analysis studies for RAG pipelines.
 \end{itemize}
 
+\resheading{Selected Writing}
+
+\resitem{Retrieval Evaluation Beyond Surface Metrics}{\href{https://gioiazheng.github.io/writing/rag-failure-analysis/}{gioiazheng.github.io/writing/rag-failure-analysis}}
+\ressubitem{Technical note --- RAG evaluation, grounding, failure analysis}
+
+\resitem{MS MARCO GenQA Technical Report}{\href{https://gioiazheng.github.io/projects/msmarco-genqa/}{gioiazheng.github.io/projects/msmarco-genqa}}
+\ressubitem{Project report --- reproducible retrieval, reranking, and generation}
+
 \resheading{Skills}
 
-\skillrow{Programming}{Python, Go, SQL, JavaScript}
-\skillrow{Research and AI}{Information Retrieval, RAG Evaluation, Reproducibility, PyTorch, FAISS, BM25, Sentence Transformers, Cross-Encoder Reranking}
+\skillrow{Languages}{Python, Go, SQL, JavaScript}
+\skillrow{AI \& Research}{Information Retrieval, RAG Evaluation, PyTorch, FAISS, BM25, Sentence Transformers, Cross-Encoder Reranking}
 \skillrow{Systems}{Linux, Docker, GitHub Actions, OpenAPI, SQLite}
-\skillrow{Languages}{English (Professional), Italian (Bilingual), Chinese (Native), German (Beginner)}
+\skillrow{Spoken Languages}{Chinese (Native), Italian (Bilingual), English (Professional), German (Beginner)}
 
 \end{document}

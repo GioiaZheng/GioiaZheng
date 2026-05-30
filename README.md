@@ -24,14 +24,6 @@ I care about the engineering side of research: clear baselines, repeatable exper
 
 ---
 
-## Interests
-
-**Research:** Information Retrieval, Evaluation Methodology, Reproducible Machine Learning, Research Engineering
-
-**Systems:** AI Systems, Search Infrastructure
-
----
-
 ## Current Work
 
 **Research engineering:** information retrieval, RAG evaluation, paired evaluation, failure analysis, reproducible experiments

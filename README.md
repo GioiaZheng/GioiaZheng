@@ -22,12 +22,23 @@ Undergraduate at Sapienza University of Rome building reproducible retrieval and
 
 ---
 
+## Featured Research Engineering Project
+
+### [MS MARCO GenQA](https://github.com/GioiaZheng/msmarco-genqa)
+**Retrieval · Reranking · Generation · Evaluation Infrastructure**
+
+End-to-end retrieve → rerank → generate system on MS MARCO dev/small (6,980 queries, 8.8M passages). Dense retrieval with Sentence-BERT + FAISS, cross-encoder reranking, paired-bootstrap confidence intervals, BERTScore grounding checks, config-driven pipelines, run manifests, CI, optional FastAPI serving, and local / MLflow / W&B experiment tracking.
+
+**Headline:** Token-F1 improves from 0.197 to 0.368 when replacing BM25 top-3 passages with cross-encoder-reranked dense passages under the same T5-small generator.
+
+---
+
 ## Selected Projects
 
 ### [msmarco-genqa](https://github.com/GioiaZheng/msmarco-genqa) — Information Retrieval / RAG
 **Python · PyTorch · BM25 · FAISS · Cross-encoder · T5**
 
-Reproducible retrieve → rerank → generate pipeline on MS MARCO with paired-bootstrap evaluation, NLI-based grounding scoring, and a schema-versioned reproducibility manifest enforced at write time. CPU-only, single-machine.
+Reproducible retrieve → rerank → generate pipeline on MS MARCO with paired-bootstrap evaluation, NLI-based grounding scoring, config-driven experiment scripts, optional FastAPI serving, and schema-versioned reproducibility manifests.
 
 ### [go-chat-system](https://github.com/GioiaZheng/go-chat-system) — Backend Engineering
 **Go · Vue · SQLite · OpenAPI**

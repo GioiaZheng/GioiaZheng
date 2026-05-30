@@ -53,9 +53,10 @@ Cross-platform mobile app with offline-first sync for international students rea
 
 ## Technical Skills
 
-- **Programming** — Python · Go · JavaScript · SQL
+- **Programming** — Python · Go · JavaScript · SQL · PHP
 - **ML & Retrieval** — PyTorch · BM25 · FAISS · dense retrieval · cross-encoder reranking · RAG · retrieval evaluation · statistical evaluation
-- **Backend & Systems** — REST APIs · concurrent backend (Go) · Docker · Linux · Git · GitHub Actions CI
+- **Web & Automation** — WordPress · n8n · REST APIs · Vue · OpenAPI
+- **Backend & Systems** — concurrent backend (Go) · Docker · Linux · Git · GitHub Actions CI · SQLite
 
 ---
 

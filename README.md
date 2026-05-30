@@ -33,35 +33,6 @@ End-to-end retrieve → rerank → generate system on MS MARCO dev/small (6,980 
 
 ---
 
-## Selected Projects
-
-### [msmarco-genqa](https://github.com/GioiaZheng/msmarco-genqa) — Information Retrieval / RAG
-**Python · PyTorch · BM25 · FAISS · Cross-encoder · T5**
-
-Reproducible retrieve → rerank → generate pipeline on MS MARCO with paired-bootstrap evaluation, NLI-based grounding scoring, config-driven experiment scripts, optional FastAPI serving, and schema-versioned reproducibility manifests.
-
-### [go-chat-system](https://github.com/GioiaZheng/go-chat-system) — Backend Engineering
-**Go · Vue · SQLite · OpenAPI**
-
-Concurrent Go backend with REST API and embedded Vue frontend; documented under OpenAPI.
-
-### [handwritten-ocr-system](https://github.com/GioiaZheng/handwritten-ocr-system) — Computer Vision / Sequence Modeling
-**PyTorch · CNN + BiLSTM + CTC**
-
-End-to-end OCR pipeline trained on the IAM handwriting dataset; CER / WER evaluation on held-out splits.
-
-### [CiboCompass](https://github.com/GioiaZheng/CiboCompass) — Mobile / Full-stack
-**React Native · Go · SQLite**
-
-Cross-platform mobile app with offline-first sync for international students reading Italian restaurant menus.
-
-### [Leetcode-Solutions](https://github.com/GioiaZheng/Leetcode-Solutions) — Algorithms / Study Notes
-**Python · pytest · per-pattern notes**
-
-99 problem implementations with a pytest harness and a generated catalog driven by a `metadata.json` source-of-truth; reviewed pattern cards across the Blind 75 / NeetCode 150 paths.
-
----
-
 ## Technical Skills
 
 - **Programming** — Python · Go · JavaScript · SQL · PHP

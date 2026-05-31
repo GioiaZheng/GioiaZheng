@@ -22,6 +22,8 @@ My current work focuses on retrieve -> rerank -> generate pipelines for question
 
 I care about the engineering side of research: clear baselines, repeatable experiments, documented evaluation choices, and systems that can be inspected by someone other than the original author.
 
+Project labels on my profile separate coursework, study repositories, experimental work, and production-oriented projects so the scope is clear without overpackaging.
+
 ---
 
 ## Current Work

@@ -1,6 +1,6 @@
-\documentclass[10pt,a4paper]{article}
+\documentclass[11pt,a4paper]{article}
 
-\usepackage[top=0.45in,bottom=0.45in,left=0.6in,right=0.6in]{geometry}
+\usepackage[top=0.5in,bottom=0.5in,left=0.62in,right=0.62in]{geometry}
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
 \usepackage{titlesec}
@@ -9,13 +9,13 @@
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-\linespread{0.96}
+\linespread{1.02}
 
 \setlist[itemize]{
   label=-,
   leftmargin=1.2em,
-  itemsep=1pt,
-  topsep=2pt,
+  itemsep=2pt,
+  topsep=3pt,
   parsep=0pt,
   partopsep=0pt
 }
@@ -27,12 +27,12 @@
   {}
   [\vspace{-4pt}\rule{\linewidth}{0.4pt}]
 
-\titlespacing{\section}{0pt}{7pt}{2pt}
+\titlespacing{\section}{0pt}{8pt}{3pt}
 
 \newcommand{\resheading}[1]{\section*{#1}}
 
 \newcommand{\resitem}[2]{
-  \vspace{2pt}
+  \vspace{3pt}
   \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
     \textbf{#1} & #2 \\
   \end{tabular*}

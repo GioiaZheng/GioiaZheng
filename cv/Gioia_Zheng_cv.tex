@@ -1,6 +1,6 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[10.8pt,a4paper]{article}
 
-\usepackage[top=0.5in,bottom=0.5in,left=0.62in,right=0.62in]{geometry}
+\usepackage[top=0.55in,bottom=0.55in,left=0.62in,right=0.62in]{geometry}
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
 \usepackage{titlesec}
@@ -9,11 +9,11 @@
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-\linespread{1.02}
+\linespread{1.03}
 
 \setlist[itemize]{
   label=-,
-  leftmargin=1.2em,
+  leftmargin=1.25em,
   itemsep=2pt,
   topsep=3pt,
   parsep=0pt,
@@ -21,29 +21,25 @@
 }
 
 \titleformat{\section}
-  {\normalsize\bfseries}
+  {\large\bfseries}
   {}
   {0pt}
   {}
-  [\vspace{-4pt}\rule{\linewidth}{0.4pt}]
+  [\vspace{-4pt}\rule{\linewidth}{0.45pt}]
 
-\titlespacing{\section}{0pt}{8pt}{3pt}
+\titlespacing{\section}{0pt}{9pt}{4pt}
 
-\newcommand{\resheading}[1]{\section*{#1}}
-
-\newcommand{\resitem}[2]{
+\newcommand{\entry}[2]{
   \vspace{3pt}
   \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
     \textbf{#1} & #2 \\
   \end{tabular*}
 }
 
-\newcommand{\ressubitem}[1]{
-  \textit{#1}\vspace{-2pt}
-}
+\newcommand{\subentry}[1]{\textit{#1}\vspace{-1pt}}
 
 \newcommand{\skillrow}[2]{
-  \begin{tabular*}{\textwidth}{@{}p{0.21\textwidth}@{\extracolsep{\fill}}p{0.75\textwidth}@{}}
+  \begin{tabular*}{\textwidth}{@{}p{0.23\textwidth}@{\extracolsep{\fill}}p{0.73\textwidth}@{}}
     \textbf{#1} & #2 \\
   \end{tabular*}
 }
@@ -51,79 +47,96 @@
 \begin{document}
 
 \begin{center}
-{\Large \textbf{Gioia Zheng}} \\[2pt]
+{\LARGE \textbf{Gioia Zheng}} \\[3pt]
 Rome, Italy \quad | \quad
-\href{mailto:gioia.zheng.stud@gmail.com}{gioia.zheng.stud@gmail.com} \quad | \quad
-\href{https://www.linkedin.com/in/gioia-zheng-9233a0303}{linkedin.com/in/gioia-zheng-9233a0303} \\[1pt]
+\href{mailto:zheng.2040439@studenti.uniroma1.it}{zheng.2040439@studenti.uniroma1.it} \quad | \quad
+\href{https://www.linkedin.com/in/gioia-zheng-9233a0303}{linkedin.com/in/gioia-zheng-9233a0303} \\[2pt]
 \href{https://github.com/GioiaZheng}{github.com/GioiaZheng} \quad | \quad
-\href{https://gioiazheng.github.io}{gioiazheng.github.io}
+\href{https://gioiazheng.github.io}{gioiazheng.github.io} \quad | \quad
+\href{https://orcid.org/0009-0000-8212-4506}{ORCID: 0009-0000-8212-4506}
 \end{center}
 
-\vspace{-7pt}
+\vspace{-5pt}
 
-\resheading{Profile}
-B.Sc. student in Applied Computer Science and Artificial Intelligence at Sapienza University of Rome. Building reproducible retrieval and evaluation systems for large-scale QA pipelines. Interested in research-engineering problems at the intersection of information retrieval, evaluation methodology, and AI infrastructure.
+\section*{Profile}
+Applied Computer Science and AI undergraduate at Sapienza University of Rome, focused on information retrieval, retrieval-augmented generation, evaluation methodology, and backend systems. I build reproducible research-engineering pipelines: retrieve/rerank/generate workflows, paired statistical evaluation, experiment manifests, CI checks, and inspectable documentation. Open to research internships, ML/research-engineering roles, and backend/software engineering roles in Italy, the EU, or remote.
 
-\resheading{Education}
-\resitem{Sapienza University of Rome}{Sep 2022 -- Present}
+\section*{Education}
+\entry{Sapienza University of Rome}{Sep 2022 -- Present}
 B.Sc. in Applied Computer Science and Artificial Intelligence
 
-\resheading{Projects}
-
-\resitem{MS MARCO Generative QA System}{\href{https://github.com/GioiaZheng/msmarco-genqa}{github.com/GioiaZheng/msmarco-genqa}}
-\ressubitem{Python --- Retrieval, Reranking, Generation, Evaluation}
+\section*{Research and Engineering Experience}
+\entry{NLP Research Intern, Microsoft}{Feb 2026 -- May 2026}
+\subentry{Natural Language Computing, remote}
 \begin{itemize}
-\item Built an end-to-end retrieve $\rightarrow$ rerank $\rightarrow$ generate pipeline on MS MARCO (6,980 queries, 8.8M passages), improving Token-F1 from 0.197 to 0.368.
-\item Reproduced sparse, dense, and cross-encoder retrieval stages on CPU-only infrastructure using BM25, SBERT/FAISS, and MiniLM reranking.
-\item Built research-engineering infrastructure including CI, config-driven pipelines, experiment manifests, benchmark reporting, optional FastAPI serving, and local / MLflow / W\&B tracking.
-\item Analyzed disagreement between lexical and semantic grounding metrics, revealing evaluation inconsistencies in generated QA outputs.
+\item Designed and implemented a multi-stage retrieval and generation evaluation pipeline over MS MARCO-scale data: BM25 retrieval, FAISS dense retrieval, transformer reranking, and seq2seq generation.
+\item Built statistical evaluation routines for per-stage lift, including semantic and exact-match generation metrics, paired comparisons, and confidence intervals.
+\item Engineered CI and reproducibility support for long-running indexing and evaluation jobs, including report-ready outputs and experiment notes.
 \end{itemize}
 
-\resitem{Handwritten OCR Pipeline}{\href{https://github.com/GioiaZheng/handwritten-ocr-system}{github.com/GioiaZheng/handwritten-ocr-system}}
-\ressubitem{PyTorch --- CRNN, BiLSTM, CTC}
+\entry{Web Development Intern, Idearia}{Mar 2026 -- Present}
+\subentry{Rome, Italy}
 \begin{itemize}
-\item Designed and trained a CRNN-based handwritten text recognition system combining residual CNN feature extraction, BiLSTM sequence modeling, and CTC decoding.
-\item Implemented end-to-end training, evaluation, and monitoring pipelines with CER/WER tracking and TensorBoard instrumentation.
+\item Develop and maintain PHP / WordPress backend systems for client-facing production websites.
+\item Build n8n automation workflows connecting WordPress forms, content pipelines, and external services, reducing manual operational work.
 \end{itemize}
 
-\resitem{Chat Service}{\href{https://github.com/GioiaZheng/go-chat-system}{github.com/GioiaZheng/go-chat-system}}
-\ressubitem{Go Backend + Vue Frontend + SQLite}
+\section*{Selected Projects}
+\entry{MS MARCO Generative QA System}{\href{https://github.com/GioiaZheng/msmarco-genqa}{github.com/GioiaZheng/msmarco-genqa}}
+\subentry{Python, PyTorch, BM25, FAISS, cross-encoder reranking, T5, paired bootstrap}
 \begin{itemize}
-\item Developed a self-contained chat platform with Go backend, Vue frontend, and SQLite persistence packaged as a single deployable artifact.
-\item Established automated quality gates including OpenAPI validation, testing, and CI-based build verification.
+\item Built a reproducible retrieve $\rightarrow$ rerank $\rightarrow$ generate pipeline on MS MARCO passage data, with config-driven experiments and schema-versioned manifests.
+\item Reported Token-F1 improvement from 0.197 to 0.368 on 6,980 paired queries, with paired-bootstrap confidence interval [+0.163, +0.178].
+\item Documented limitations clearly: dense/reranker experiments use a qrels-anchored sample; CPU-only reproducibility is prioritized over GPU throughput.
 \end{itemize}
 
-\resheading{Experience}
-
-\resitem{Web Development Intern}{Mar 2026 -- Present}
-\ressubitem{Idearia --- Rome, Italy}
+\entry{Handwritten OCR Pipeline}{\href{https://github.com/GioiaZheng/handwritten-ocr-system}{github.com/GioiaZheng/handwritten-ocr-system}}
+\subentry{PyTorch, CNN, BiLSTM, CTC, IAM handwriting dataset}
 \begin{itemize}
-\item Developed and maintained PHP / WordPress backend systems for production websites.
-\item Built automation workflows using n8n to connect forms, content pipelines, and external services.
+\item Implemented a handwritten text recognition pipeline from preprocessing to CRNN/BiLSTM/CTC decoding, with CER/WER evaluation hooks.
+\item Added reproducibility documentation for training configuration, seed, deterministic split, and pending measured CER/WER reporting.
 \end{itemize}
 
-\resitem{NLP Algorithm Engineer Intern}{Feb 2026 -- May 2026}
-\ressubitem{Microsoft --- Natural Language Computing (Remote)}
+\entry{Go Chat Service}{\href{https://github.com/GioiaZheng/go-chat-system}{github.com/GioiaZheng/go-chat-system}}
+\subentry{Go, Vue, SQLite, OpenAPI, Docker Compose}
 \begin{itemize}
-\item Contributed to retrieval-augmented QA experimentation and evaluation on the MS MARCO benchmark.
-\item Built and evaluated retrieval, reranking, generation, and analysis components over a 6,980-query benchmark using BM25, FAISS, sentence-transformers, and T5.
-\item Conducted reproducibility, grounding, and failure-analysis studies for RAG pipelines.
+\item Built a coursework-grade full-stack chat service with REST endpoints, SQLite persistence, Vue UI, OpenAPI documentation, API tests, and a documented authentication threat model.
+\item Kept production boundaries explicit: simplified token auth, single-node SQLite deployment, and no production security claims.
 \end{itemize}
 
-\resheading{Selected Writing}
+\entry{CiboCompass}{\href{https://github.com/GioiaZheng/CiboCompass}{github.com/GioiaZheng/CiboCompass}}
+\subentry{React Native, Expo, Go REST API, SQLite, offline-first UX}
+\begin{itemize}
+\item Built a mobile app prototype for international students reading restaurant menus, including dish lookup, cultural rating comparison, and local rating persistence.
+\item Documented offline sync states and demo assets for review without overstating production readiness.
+\end{itemize}
 
-\resitem{Retrieval Evaluation Beyond Surface Metrics}{\href{https://gioiazheng.github.io/writing/rag-failure-analysis/}{gioiazheng.github.io/writing/rag-failure-analysis}}
-\ressubitem{Technical note --- RAG evaluation, grounding, failure analysis}
+\newpage
 
-\resitem{MS MARCO GenQA Technical Report}{\href{https://gioiazheng.github.io/projects/msmarco-genqa/}{gioiazheng.github.io/projects/msmarco-genqa}}
-\ressubitem{Project report --- reproducible retrieval, reranking, and generation}
+\section*{Additional Experience}
+\entry{Young Representative, UPI Emilia-Romagna}{Sep 2022 -- Oct 2023}
+\subentry{Forli-Cesena province}
+\begin{itemize}
+\item Conducted data-driven research on school dropout and contributed to policy-oriented reports.
+\end{itemize}
 
-\resheading{Skills}
+\entry{Programming Intern, Sandbox Games}{May 2021 -- Jun 2021}
+\subentry{Emilia-Romagna, Italy}
+\begin{itemize}
+\item Contributed to a 3D simulation platform, working on backend systems and MySQL query optimization.
+\end{itemize}
 
-\skillrow{Languages}{Python, Go, SQL, JavaScript, PHP}
-\skillrow{AI \& Research}{Information Retrieval, RAG Evaluation, PyTorch, FAISS, BM25, Sentence Transformers, Cross-Encoder Reranking}
-\skillrow{Web \& Automation}{WordPress, n8n, REST APIs, Vue, OpenAPI}
-\skillrow{Systems}{Linux, Docker, GitHub Actions, SQLite}
-\skillrow{Spoken Languages}{Chinese (Native), Italian (Bilingual), English (Professional), German (Beginner)}
+\section*{Awards and Certifications}
+\begin{itemize}
+\item 1st Place, ``WISWUP'' Business Plan, A Scuola di Impresa Competition.
+\item TryHackMe Pre-Security Learning Path Certificate; Cyber Security 101 Certificate.
+\end{itemize}
+
+\section*{Skills}
+\skillrow{Programming}{Python, Go, SQL, JavaScript, PHP}
+\skillrow{ML and Retrieval}{Information retrieval, RAG evaluation, PyTorch, FAISS, BM25, Sentence Transformers, cross-encoder reranking, T5}
+\skillrow{Evaluation}{Paired bootstrap, confidence intervals, Token-F1, ROUGE-L, BLEU, exact match, CER/WER}
+\skillrow{Backend and Web}{REST APIs, OpenAPI, SQLite, Vue, WordPress, n8n automation, Docker, GitHub Actions}
+\skillrow{Languages}{Chinese (Native), Italian (Bilingual), English (Professional), German (Beginner)}
 
 \end{document}

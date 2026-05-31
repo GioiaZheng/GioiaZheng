@@ -28,46 +28,6 @@ by someone other than the original author.
 
 ---
 
-## Selected Work
-
-### Research engineering
-
-**[msmarco-genqa](https://github.com/GioiaZheng/msmarco-genqa)**  
-Reproducible MS MARCO retrieval-augmented QA pipeline with BM25, dense
-retrieval, cross-encoder reranking, paired-bootstrap evaluation, grounding
-analysis, manifests, and report artifacts.
-
-Evidence: [results](https://github.com/GioiaZheng/msmarco-genqa/blob/main/RESULTS.md),
-[reproducibility notes](https://github.com/GioiaZheng/msmarco-genqa/blob/main/REPRODUCIBILITY.md),
-[ACL-style report](https://github.com/GioiaZheng/msmarco-genqa/blob/main/reports/acl_findings/report.pdf).
-
-**[handwritten-ocr-system](https://github.com/GioiaZheng/handwritten-ocr-system)**  
-Experimental handwritten OCR baseline using a CNN-RNN-CTC architecture, IAM
-dataset layout, CER/WER evaluation, and documented reproducibility status.
-
-### Systems engineering
-
-**[go-chat-system](https://github.com/GioiaZheng/go-chat-system)**  
-Go and Vue chat application with REST APIs, SQLite persistence, OpenAPI
-documentation, Docker workflow, and backend tests.
-
-**[CiboCompass](https://github.com/GioiaZheng/CiboCompass)**  
-React Native and Go mobile application for international students reading
-Italian restaurant menus, with SQLite-backed dish data and offline-first
-feedback design.
-
-### Learning infrastructure
-
-**[Leetcode-Solutions](https://github.com/GioiaZheng/Leetcode-Solutions)**  
-Structured Python solution archive with metadata-driven catalogs, topic notes,
-learning paths, validation scripts, and selected tests.
-
-**[cybersecurity-learning](https://github.com/GioiaZheng/cybersecurity-learning)**  
-Engineering-oriented cybersecurity learning notes across Linux, practical
-pentesting, and cryptography challenge solving.
-
----
-
 ## Current Work
 
 **Research engineering:** information retrieval, RAG evaluation, paired

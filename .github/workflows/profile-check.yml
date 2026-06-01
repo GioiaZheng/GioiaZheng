@@ -1,0 +1,29 @@
+name: Profile check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  profile-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate profile README
+        run: python scripts/check_profile.py
+
+      - name: Run profile tests
+        run: python -m unittest discover -s tests

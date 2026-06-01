@@ -4,3 +4,6 @@ cv/*.fls
 cv/*.log
 cv/*.out
 cv/*.synctex.gz
+__pycache__/
+.pytest_cache/
+.ruff_cache/

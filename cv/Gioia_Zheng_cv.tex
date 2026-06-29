@@ -1,6 +1,6 @@
-\documentclass[10.8pt,a4paper]{article}
+\documentclass[10pt,a4paper]{article}
 
-\usepackage[top=0.55in,bottom=0.55in,left=0.62in,right=0.62in]{geometry}
+\usepackage[top=0.48in,bottom=0.48in,left=0.62in,right=0.62in]{geometry}
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
 \usepackage{titlesec}
@@ -9,13 +9,13 @@
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-\linespread{1.03}
+\linespread{1.00}
 
 \setlist[itemize]{
   label=-,
   leftmargin=1.25em,
-  itemsep=2pt,
-  topsep=3pt,
+  itemsep=1pt,
+  topsep=2pt,
   parsep=0pt,
   partopsep=0pt
 }
@@ -27,10 +27,10 @@
   {}
   [\vspace{-4pt}\rule{\linewidth}{0.45pt}]
 
-\titlespacing{\section}{0pt}{9pt}{4pt}
+\titlespacing{\section}{0pt}{7pt}{3pt}
 
 \newcommand{\entry}[2]{
-  \vspace{3pt}
+  \vspace{2pt}
   \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
     \textbf{#1} & #2 \\
   \end{tabular*}
@@ -58,85 +58,51 @@ Rome, Italy \quad | \quad
 
 \vspace{-5pt}
 
-\section*{Profile}
-Applied Computer Science and AI undergraduate at Sapienza University of Rome, focused on information retrieval, retrieval-augmented generation, evaluation methodology, and backend systems. I build reproducible research-engineering pipelines: retrieve/rerank/generate workflows, paired statistical evaluation, experiment manifests, CI checks, and inspectable documentation. Open to research internships, ML/research-engineering roles, and backend/software engineering roles in Italy, the EU, or remote.
+\section*{Research Profile}
+Applied Computer Science and AI undergraduate at Sapienza University of Rome studying where retrieval-augmented generation fails, how retrieval and generation errors interact, and how evaluation choices affect measured conclusions. Current work centers on information retrieval, RAG evaluation, failure analysis, and reproducible experiments.
 
 \section*{Education}
 \entry{Sapienza University of Rome}{Sep 2022 -- Present}
 B.Sc. in Applied Computer Science and Artificial Intelligence
 
-\section*{Research and Engineering Experience}
+\section*{Research Experience}
 \entry{NLP Research Intern, Microsoft}{Feb 2026 -- May 2026}
 \subentry{Natural Language Computing, remote}
 \begin{itemize}
 \item Designed and implemented a multi-stage retrieval and generation evaluation pipeline over MS MARCO-scale data: BM25 retrieval, FAISS dense retrieval, transformer reranking, and seq2seq generation.
-\item Built statistical evaluation routines for per-stage lift, including semantic and exact-match generation metrics, paired comparisons, and confidence intervals.
-\item Engineered CI and reproducibility support for long-running indexing and evaluation jobs, including report-ready outputs and experiment notes.
+\item Built paired evaluation routines with confidence intervals to measure how stage-level retrieval changes propagate to answer quality.
+\item Defined schema-versioned experiment manifests and validation checks so results remain traceable to code, data, configuration, and environment.
 \end{itemize}
 
-\entry{Web Development Intern, Idearia}{Mar 2026 -- Present}
-\subentry{Rome, Italy}
-\begin{itemize}
-\item Develop and maintain PHP / WordPress backend systems for client-facing production websites.
-\item Build n8n automation workflows connecting WordPress forms, content pipelines, and external services, reducing manual operational work.
-\end{itemize}
-
-\section*{Selected Projects}
+\section*{Selected Research Projects}
 \entry{MS MARCO Generative QA System}{\href{https://github.com/GioiaZheng/msmarco-genqa}{github.com/GioiaZheng/msmarco-genqa}}
 \subentry{Python, PyTorch, BM25, FAISS, cross-encoder reranking, T5, paired bootstrap}
 \begin{itemize}
+\item Investigate when retrieval and reranking improvements translate into better grounded generation, rather than only higher aggregate surface metrics.
 \item Built a reproducible retrieve $\rightarrow$ rerank $\rightarrow$ generate pipeline on MS MARCO passage data, with config-driven experiments and schema-versioned manifests.
 \item Reported Token-F1 improvement from 0.197 to 0.368 on 6,980 paired queries, with paired-bootstrap confidence interval [+0.163, +0.178].
-\item Documented limitations clearly: dense/reranker experiments use a qrels-anchored sample; CPU-only reproducibility is prioritized over GPU throughput.
+\item Developing a failure taxonomy that separates retrieval, reranking, evidence-use, and generation errors; dense results are explicitly limited to a qrels-anchored sample.
 \end{itemize}
 
 \entry{Handwritten OCR Pipeline}{\href{https://github.com/GioiaZheng/handwritten-ocr-system}{github.com/GioiaZheng/handwritten-ocr-system}}
 \subentry{PyTorch, CNN, BiLSTM, CTC, IAM handwriting dataset}
 \begin{itemize}
 \item Implemented a handwritten text recognition pipeline from preprocessing to CRNN/BiLSTM/CTC decoding, with CER/WER evaluation hooks.
-\item Added reproducibility documentation for training configuration, seed, deterministic split, and pending measured CER/WER reporting.
+\item Documented training configuration, deterministic splits, and the open requirement for measured CER/WER reporting rather than presenting unverified results.
 \end{itemize}
-
-\entry{Go Chat Service}{\href{https://github.com/GioiaZheng/go-chat-system}{github.com/GioiaZheng/go-chat-system}}
-\subentry{Go, Vue, SQLite, OpenAPI, Docker Compose}
-\begin{itemize}
-\item Built a coursework-grade full-stack chat service with REST endpoints, SQLite persistence, Vue UI, OpenAPI documentation, API tests, and a documented authentication threat model.
-\item Kept production boundaries explicit: simplified token auth, single-node SQLite deployment, and no production security claims.
-\end{itemize}
-
-\entry{CiboCompass}{\href{https://github.com/GioiaZheng/CiboCompass}{github.com/GioiaZheng/CiboCompass}}
-\subentry{React Native, Expo, Go REST API, SQLite, offline-first UX}
-\begin{itemize}
-\item Built a mobile app prototype for international students reading restaurant menus, including dish lookup, cultural rating comparison, and local rating persistence.
-\item Documented offline sync states and demo assets for review without overstating production readiness.
-\end{itemize}
-
-\newpage
 
 \section*{Additional Experience}
+\entry{Web Development Intern, Idearia}{Mar 2026 -- Present}
+Maintain production systems and automate operational workflows in a client-facing environment.
+
 \entry{Young Representative, UPI Emilia-Romagna}{Sep 2022 -- Oct 2023}
-\subentry{Forli-Cesena province}
-\begin{itemize}
-\item Conducted data-driven research on school dropout and contributed to policy-oriented reports.
-\end{itemize}
-
-\entry{Programming Intern, Sandbox Games}{May 2021 -- Jun 2021}
-\subentry{Emilia-Romagna, Italy}
-\begin{itemize}
-\item Contributed to a 3D simulation platform, working on backend systems and MySQL query optimization.
-\end{itemize}
-
-\section*{Awards and Certifications}
-\begin{itemize}
-\item 1st Place, ``WISWUP'' Business Plan, A Scuola di Impresa Competition.
-\item TryHackMe Pre-Security Learning Path Certificate; Cyber Security 101 Certificate.
-\end{itemize}
+Conducted data-driven research on school dropout and contributed to policy-oriented reports.
 
 \section*{Skills}
-\skillrow{Programming}{Python, Go, SQL, JavaScript, PHP}
+\skillrow{Programming}{Python, SQL}
 \skillrow{ML and Retrieval}{Information retrieval, RAG evaluation, PyTorch, FAISS, BM25, Sentence Transformers, cross-encoder reranking, T5}
-\skillrow{Evaluation}{Paired bootstrap, confidence intervals, Token-F1, ROUGE-L, BLEU, exact match, CER/WER}
-\skillrow{Backend and Web}{REST APIs, OpenAPI, SQLite, Vue, WordPress, n8n automation, Docker, GitHub Actions}
+\skillrow{Research Methods}{Paired bootstrap, confidence intervals, controlled ablations, grounding evaluation, failure analysis, CER/WER}
+\skillrow{Research Tooling}{Linux, Docker, Git, GitHub Actions, experiment manifests, reproducible pipelines}
 \skillrow{Languages}{Chinese (Native), Italian (Bilingual), English (Professional), German (Beginner)}
 
 \end{document}

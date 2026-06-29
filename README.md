@@ -9,22 +9,23 @@ Sapienza University of Rome, Italy
 <a href="https://gioiazheng.github.io">Website</a> -
 <a href="https://www.linkedin.com/in/gioia-zheng-9233a0303">LinkedIn</a> -
 <a href="mailto:gioia.zheng.stud@gmail.com">Email</a> -
-<a href="cv/Gioia_Zheng_cv.pdf">Resume</a>
+<a href="cv/Gioia_Zheng_cv.pdf">Academic CV</a>
 </p>
 
 ---
 
 ## About me
 
-I work on retrieval, evaluation, and reproducible ML systems.
+I study information retrieval and retrieval-augmented generation, with a focus
+on where retrieval gains fail to produce better grounded answers.
 
-My current focus is retrieve-rerank-generate question answering: dense
-retrieval, cross-encoder reranking, paired statistical evaluation, experiment
-tracking, and reproducibility infrastructure.
+My current work asks how retrieval and generation errors interact, which
+evaluation choices change measured conclusions, and how failure categories can
+expose regressions hidden by aggregate scores.
 
-I care about the engineering side of research: clear baselines, repeatable
-experiments, documented evaluation choices, and systems that can be inspected
-by someone other than the original author.
+I use reproducible ML systems as research instruments: controlled baselines,
+paired comparisons, confidence intervals, versioned manifests, and inspectable
+experiment artifacts.
 
 ---
 
@@ -43,26 +44,29 @@ by someone other than the original author.
 
 ## Current Work
 
-**Research engineering:** information retrieval, RAG evaluation, paired
-evaluation, failure analysis, reproducible experiments
+**Research question:** When does better retrieval improve grounded generation,
+and when do conventional metrics hide the failure?
 
-**Software engineering:** Go backends, REST APIs, SQLite systems, CI, OpenAPI
-validation, production PHP / WordPress work
+**Current study:** Controlled retrieve-rerank-generate experiments on MS MARCO,
+using paired statistical evaluation and explicit grounding measures.
 
-**Automation:** n8n workflows for operational and content pipelines
+**Research direction:** A versioned RAG failure taxonomy that separates
+retrieval, reranking, evidence-use, and generation errors.
 
 ---
 
 ## Stack
 
-**Programming:** Python, Go, JavaScript, SQL, PHP
+**Research:** Information retrieval, RAG evaluation, grounding, failure analysis
 
-**ML and retrieval:** PyTorch, BM25, FAISS, Sentence-BERT, cross-encoder
-reranking, T5, RAG evaluation
+**Methods:** Paired bootstrap, confidence intervals, controlled ablations,
+Token-F1, ROUGE-L, BLEU, exact match
 
-**Web and automation:** WordPress, n8n, REST APIs, Vue, OpenAPI
+**Models and tools:** Python, PyTorch, BM25, FAISS, Sentence-BERT, cross-encoder
+reranking, T5
 
-**Systems:** Linux, Docker, Git, GitHub Actions, SQLite
+**Research infrastructure:** Linux, Docker, Git, GitHub Actions, experiment
+manifests, reproducible pipelines
 
 **Languages:** Chinese (Native), Italian (Bilingual), English (Professional),
 German (Beginner)

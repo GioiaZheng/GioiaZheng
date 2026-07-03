@@ -5,6 +5,11 @@
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{array}
+\input{glyphtounicode}
+\pdfgentounicode=1
+\ifdefined\pdfinterwordspaceon
+  \pdfinterwordspaceon
+\fi
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
@@ -13,9 +18,9 @@
 
 \setlist[itemize]{
   label=-,
-  leftmargin=1.25em,
-  itemsep=1pt,
-  topsep=2pt,
+  leftmargin=1.15em,
+  itemsep=0pt,
+  topsep=1pt,
   parsep=0pt,
   partopsep=0pt
 }
@@ -27,7 +32,7 @@
   {}
   [\vspace{-4pt}\rule{\linewidth}{0.45pt}]
 
-\titlespacing{\section}{0pt}{7pt}{3pt}
+\titlespacing{\section}{0pt}{5pt}{2pt}
 
 \newcommand{\entry}[2]{
   \vspace{2pt}
@@ -59,40 +64,40 @@ Rome, Italy \quad | \quad
 \vspace{-5pt}
 
 \section*{Research Profile}
-Applied Computer Science and AI undergraduate at Sapienza University of Rome studying where retrieval-augmented generation fails, how retrieval and generation errors interact, and how evaluation choices affect measured conclusions. Current work centers on information retrieval, RAG evaluation, failure analysis, and reproducible experiments.
+Applied Computer Science and AI undergraduate at Sapienza University of Rome working on safety-relevant evaluation of RAG and LLM systems. I build reproducible pipelines for paired comparisons, grounding checks, trace-level diagnostics, and failure taxonomies that expose regressions hidden by aggregate metrics.
 
 \section*{Education}
 \entry{Sapienza University of Rome}{Sep 2022 -- Present}
 B.Sc. in Applied Computer Science and Artificial Intelligence
 
 \section*{Research Experience}
-\entry{NLP Research Intern, Microsoft}{Feb 2026 -- May 2026}
+\entry{NLP Algorithm Engineer Intern, Microsoft (China)}{Feb 2026 -- May 2026}
 \subentry{Natural Language Computing, remote}
 \begin{itemize}
 \item Designed and implemented a multi-stage retrieval and generation evaluation pipeline over MS MARCO-scale data: BM25 retrieval, FAISS dense retrieval, transformer reranking, and seq2seq generation.
-\item Built paired evaluation routines with confidence intervals to measure how stage-level retrieval changes propagate to answer quality.
+\item Built paired evaluation routines with confidence intervals to measure how stage-level retrieval changes propagate to answer quality and grounding behavior.
 \item Defined schema-versioned experiment manifests and validation checks so results remain traceable to code, data, configuration, and environment.
 \end{itemize}
 
 \section*{Selected Research Projects}
 \entry{MS MARCO Generative QA System}{\href{https://github.com/GioiaZheng/msmarco-genqa}{github.com/GioiaZheng/msmarco-genqa}}
-\subentry{Python, PyTorch, BM25, FAISS, cross-encoder reranking, T5, paired bootstrap}
+\subentry{Python, PyTorch, BM25, FAISS, cross-encoder reranking, T5, grounding evaluation}
 \begin{itemize}
-\item Investigate when retrieval and reranking improvements translate into better grounded generation, rather than only higher aggregate surface metrics.
-\item Built a reproducible retrieve $\rightarrow$ rerank $\rightarrow$ generate pipeline on MS MARCO passage data, with config-driven experiments and schema-versioned manifests.
+\item Study when retrieval and reranking gains translate into faithful, evidence-supported generation rather than only higher aggregate surface metrics.
+\item Built a reproducible retrieve $\rightarrow$ rerank $\rightarrow$ generate pipeline on MS MARCO passage data with config-driven experiments and schema-versioned manifests.
 \item Reported Token-F1 improvement from 0.197 to 0.368 on 6,980 paired queries, with paired-bootstrap confidence interval [+0.163, +0.178].
-\item Developing a failure taxonomy that separates retrieval, reranking, evidence-use, and generation errors; dense results are explicitly limited to a qrels-anchored sample.
+\item Developed a failure taxonomy separating retrieval, reranking, evidence-use, and generation errors to expose regressions hidden by aggregate scores.
 \end{itemize}
 
-\entry{Handwritten OCR Pipeline}{\href{https://github.com/GioiaZheng/handwritten-ocr-system}{github.com/GioiaZheng/handwritten-ocr-system}}
-\subentry{PyTorch, CNN, BiLSTM, CTC, IAM handwriting dataset}
+\entry{RAG Observatory}{\href{https://github.com/GioiaZheng/rag-observatory}{github.com/GioiaZheng/rag-observatory}}
+\subentry{Python, trace schemas, failure taxonomy, evidence attribution, diagnostic reports}
 \begin{itemize}
-\item Implemented a handwritten text recognition pipeline from preprocessing to CRNN/BiLSTM/CTC decoding, with CER/WER evaluation hooks.
-\item Documented training configuration, deterministic splits, and the open requirement for measured CER/WER reporting rather than presenting unverified results.
+\item Building a trace-based observability toolkit for RAG runs covering queries, retrieved candidates, context, answers, evidence, evaluation signals, and failure labels.
+\item Implemented schema validation, failure-label checks, diagnostic reports, and comparison workflows for inspecting support, abstention behavior, and metric-hidden regressions.
 \end{itemize}
 
 \section*{Additional Experience}
-\entry{Web Development Intern, Idearia}{Mar 2026 -- Present}
+\entry{Web Development Intern, Idearia}{Mar 2026 -- Jun 2026}
 Maintain production systems and automate operational workflows in a client-facing environment.
 
 \entry{Young Representative, UPI Emilia-Romagna}{Sep 2022 -- Oct 2023}
@@ -100,8 +105,8 @@ Conducted data-driven research on school dropout and contributed to policy-orien
 
 \section*{Skills}
 \skillrow{Programming}{Python, SQL}
-\skillrow{ML and Retrieval}{Information retrieval, RAG evaluation, PyTorch, FAISS, BM25, Sentence Transformers, cross-encoder reranking, T5}
-\skillrow{Research Methods}{Paired bootstrap, confidence intervals, controlled ablations, grounding evaluation, failure analysis, CER/WER}
+\skillrow{ML and Retrieval}{Information retrieval, RAG and LLM evaluation, PyTorch, FAISS, BM25, Sentence Transformers, cross-encoder reranking, T5}
+\skillrow{Research Methods}{Paired bootstrap, confidence intervals, controlled ablations, grounding evaluation, failure taxonomy, trace-level diagnostics}
 \skillrow{Research Tooling}{Linux, Docker, Git, GitHub Actions, experiment manifests, reproducible pipelines}
 \skillrow{Languages}{Chinese (Native), Italian (Bilingual), English (Professional), German (Beginner)}
 

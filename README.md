@@ -37,8 +37,6 @@ experiment artifacts.
 | [rag-observatory](https://github.com/GioiaZheng/rag-observatory) | Trace-based observability for RAG runs | New local-first toolkit for turning retrieval context, answers, evidence, and failure labels into inspectable reports |
 | [CiboCompass](https://github.com/GioiaZheng/CiboCompass) | Offline-first mobile food exploration app | React Native + Go + SQLite project focused on practical UX, sync behavior, and cultural menu understanding |
 | [go-chat-system](https://github.com/GioiaZheng/go-chat-system) | Full-stack chat application | Go REST APIs, Vue frontend, SQLite persistence, authentication, OpenAPI, and CI-backed testing |
-| [handwritten-ocr-system](https://github.com/GioiaZheng/handwritten-ocr-system) | CNN-RNN-CTC handwritten text recognition | Computer-vision project with explicit reproducibility notes and CER/WER evaluation planning |
-| [Leetcode-Solutions](https://github.com/GioiaZheng/Leetcode-Solutions) | Algorithm practice with tests and notes | Structured Python solutions, selected automated tests, metadata, topic notes, and interview review paths |
 
 ---
 
@@ -52,6 +50,30 @@ using paired statistical evaluation and explicit grounding measures.
 
 **Research direction:** A versioned RAG failure taxonomy that separates
 retrieval, reranking, evidence-use, and generation errors.
+
+---
+
+## Open Source Contributions
+
+I contribute focused fixes, tests, documentation, and evaluation improvements to
+open-source retrieval and ML tooling.
+
+**Merged upstream**
+
+- [MTEB #4861](https://github.com/embeddings-benchmark/mteb/pull/4861) —
+  documented the model evaluation request workflow.
+- [MTEB leaderboard #31](https://github.com/embeddings-benchmark/leaderboard-frontend/pull/31) —
+  added model language-scope metadata with tests and accessibility coverage.
+
+**Under review**
+
+- [BEIR #218](https://github.com/beir-cellar/beir/pull/218) and
+  [#219](https://github.com/beir-cellar/beir/pull/219) — regression fixes for
+  dense exact search and Hugging Face Dataset inputs.
+- [LangChain LiteLLM #212](https://github.com/langchain-ai/langchain-litellm/pull/212) —
+  support for the `base_url` embeddings configuration path.
+- [RAGChecker #39](https://github.com/amazon-science/RAGChecker/pull/39) —
+  clarified metric input requirements and reference-free evaluation boundaries.
 
 ---
 

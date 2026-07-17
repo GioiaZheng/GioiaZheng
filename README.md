@@ -20,24 +20,18 @@ I study information retrieval and retrieval-augmented generation, focusing on
 when improvements in retrieval do—or do not—lead to more accurate and grounded
 answers.
 
-My work examines how retrieval, reranking, evidence use, and generation errors
-interact; how evaluation choices affect experimental conclusions; and how
-failure analysis can reveal regressions hidden by aggregate metrics.
-
-I build reproducible ML research pipelines using controlled baselines, paired
-comparisons, confidence intervals, versioned experiment manifests, and
-inspectable artifacts.
+My work combines controlled retrieval and generation experiments with paired
+evaluation, failure analysis, versioned manifests, and inspectable artifacts.
 
 ---
 
 ## Selected Work
 
-| Project | Focus | Highlights |
+| Project | Focus | Current scope |
 | --- | --- | --- |
-| [msmarco-genqa](https://github.com/GioiaZheng/msmarco-genqa) | Retrieval-augmented generation on MS MARCO | Reproducible retrieval, reranking, generation, grounding analysis, paired statistical evaluation, CI, and experiment reports |
-| [rag-observatory](https://github.com/GioiaZheng/rag-observatory) | Trace-based observability for RAG systems | Local-first tooling for inspecting retrieved evidence, generated answers, execution traces, and failure categories |
-| [CiboCompass](https://github.com/GioiaZheng/CiboCompass) | Offline-first mobile food exploration | React Native, Go, and SQLite application focused on synchronization, practical UX, and cultural menu understanding |
-| [go-chat-system](https://github.com/GioiaZheng/go-chat-system) | Full-stack chat application | Go REST APIs, Vue frontend, SQLite persistence, authentication, OpenAPI documentation, testing, and CI |
+| [msmarco-genqa](https://github.com/GioiaZheng/msmarco-genqa) | Retrieval-augmented generation on MS MARCO | Retrieval, reranking, generation, grounding analysis, paired statistical evaluation, and reproducible experiment reports |
+| [rag-observatory](https://github.com/GioiaZheng/rag-observatory) | Trace-based analysis for RAG systems | Research prototype for inspecting retrieved evidence, generated answers, execution traces, and failure labels |
+| [CiboCompass](https://github.com/GioiaZheng/CiboCompass) | Offline-resilient mobile food exploration | React Native, Go, and SQLite application with local caching, a persistent retry queue, and idempotent submission |
 
 ---
 
@@ -77,22 +71,3 @@ to open-source retrieval and machine-learning tools.
 - [RAGChecker #39](https://github.com/amazon-science/RAGChecker/pull/39) —
   clarified metric input requirements and the boundaries of reference-free
   evaluation.
-
----
-
-## Technical Profile
-
-**Research areas:** Information retrieval, retrieval-augmented generation,
-grounding evaluation, failure analysis
-
-**Evaluation methods:** Paired bootstrap, confidence intervals, controlled
-ablations, Token-F1, ROUGE-L, BLEU, exact match
-
-**Models and tools:** Python, PyTorch, BM25, FAISS, Sentence-BERT,
-cross-encoder reranking, T5
-
-**Research infrastructure:** Linux, Docker, Git, GitHub Actions, experiment
-manifests, reproducible pipelines
-
-**Languages:** Chinese — Native · Italian — Bilingual · English — Professional ·
-German — Beginner

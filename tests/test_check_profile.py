@@ -21,12 +21,12 @@ Sapienza University of Rome, Italy
 <a href="cv/Gioia_Zheng_cv.pdf">Resume</a>
 </p>
 
-## About me
-I work on retrieval, evaluation, and reproducible ML systems.
+## About Me
+I work on retrieval, evaluation, and failure analysis.
 
-## Current Work
+## Selected Work
 
-## Stack
+## Current Research
 """
 
 
@@ -59,13 +59,13 @@ class ProfileCheckTests(unittest.TestCase):
             root = Path(tmp_dir)
             (root / "cv").mkdir()
             (root / "cv" / "Gioia_Zheng_cv.pdf").write_bytes(b"%PDF-1.4\n")
-            readme = VALID_README.replace("reproducible ML systems", "research systems")
+            readme = VALID_README.replace("failure analysis", "research systems")
             (root / "README.md").write_text(readme, encoding="utf-8")
 
             errors = validate_profile(root)
 
             self.assertIn(
-                "README.md is missing required profile text: reproducible ML systems.",
+                "README.md is missing required profile text: failure analysis.",
                 errors,
             )
 

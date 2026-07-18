@@ -10,16 +10,16 @@ from urllib.parse import unquote
 
 
 REQUIRED_HEADINGS = (
-    "About me",
-    "Current Work",
-    "Stack",
+    "About Me",
+    "Selected Work",
+    "Current Research",
 )
 
 REQUIRED_PHRASES = (
     "Gioia Zheng",
     "Applied Computer Science and Artificial Intelligence",
     "Sapienza University of Rome",
-    "reproducible ML systems",
+    "failure analysis",
 )
 
 REQUIRED_LINKS = (

@@ -47,28 +47,3 @@ per-example failure analysis.
 
 **Research direction:** Developing a versioned RAG failure taxonomy that
 distinguishes retrieval, reranking, evidence-use, and generation errors.
-
----
-
-## Open Source Contributions
-
-I contribute targeted fixes, tests, documentation, and evaluation improvements
-to open-source retrieval and machine-learning tools.
-
-### Merged Upstream
-
-- [MTEB #4861](https://github.com/embeddings-benchmark/mteb/pull/4861) —
-  documented the model-evaluation request workflow.
-- [MTEB Leaderboard #31](https://github.com/embeddings-benchmark/leaderboard-frontend/pull/31) —
-  added model language-scope metadata, tests, and accessibility coverage.
-
-### Active Contributions
-
-- [BEIR #218](https://github.com/beir-cellar/beir/pull/218) and
-  [BEIR #219](https://github.com/beir-cellar/beir/pull/219) —
-  regression fixes for dense exact search and Hugging Face Dataset inputs.
-- [LangChain LiteLLM #212](https://github.com/langchain-ai/langchain-litellm/pull/212) —
-  support for the `base_url` embeddings configuration path.
-- [RAGChecker #39](https://github.com/amazon-science/RAGChecker/pull/39) —
-  clarified metric input requirements and the boundaries of reference-free
-  evaluation.

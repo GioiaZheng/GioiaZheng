@@ -17,6 +17,9 @@ Sapienza University of Rome, Italy
 
 ## About Me
 
+Research focus: retrieval and RAG evaluation, failure analysis, and
+reproducible ML systems.
+
 I study information retrieval and retrieval-augmented generation, focusing on
 when improvements in retrieval do—or do not—lead to more accurate and grounded
 answers.
@@ -30,9 +33,9 @@ evaluation, failure analysis, versioned manifests, and inspectable artifacts.
 
 | Project | Focus | Current scope |
 | --- | --- | --- |
-| [msmarco-genqa](https://github.com/GioiaZheng/msmarco-genqa) | Retrieval-augmented generation on MS MARCO | Retrieval, reranking, generation, grounding analysis, paired statistical evaluation, and reproducible experiment reports |
 | [rag-observatory](https://github.com/GioiaZheng/rag-observatory) · [Live Space](https://huggingface.co/spaces/GioiaZheng/rag-observatory) · [Toy Dataset](https://huggingface.co/datasets/GioiaZheng/rag-observatory-toy-traces) | Trace-based analysis for RAG systems | Research prototype for inspecting retrieved evidence, generated answers, execution traces, and failure labels |
-| [CiboCompass](https://github.com/GioiaZheng/CiboCompass) | Offline-resilient mobile food exploration | React Native, Go, and SQLite application with local caching, a persistent retry queue, and idempotent submission |
+| [msmarco-genqa](https://github.com/GioiaZheng/msmarco-genqa) · [Benchmark Runs](https://huggingface.co/datasets/GioiaZheng/msmarco-genqa-benchmark-runs) | Retrieval-augmented generation on MS MARCO | Retrieval, reranking, generation, grounding analysis, paired statistical evaluation, and reproducible experiment reports |
+| [Public research artifacts](https://huggingface.co/GioiaZheng) | Reusable evidence for evaluation work | Hugging Face datasets / Spaces, versioned reports, release archives, manifests, and trace examples connected back to the source repositories |
 
 ---
 

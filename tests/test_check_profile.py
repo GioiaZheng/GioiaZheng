@@ -16,15 +16,17 @@ Sapienza University of Rome, Italy
 
 <p align="center">
 <a href="https://gioiazheng.github.io">Website</a> -
-<a href="https://www.linkedin.com/in/gioia-zheng-9233a0303">LinkedIn</a> -
+<a href="https://www.linkedin.com/in/gioiazheng/">LinkedIn</a> -
 <a href="mailto:gioia.zheng.stud@gmail.com">Email</a> -
 <a href="cv/Gioia_Zheng_cv.pdf">Resume</a>
 </p>
 
 ## About Me
-I work on retrieval, evaluation, and failure analysis.
+I work on RAG/LLM Evaluation, failure analysis, and Reinforcement Learning for game and embodied agents.
 
 ## Selected Work
+
+## Selected Open-Source Contributions
 
 ## Current Research
 """
@@ -75,7 +77,7 @@ class ProfileCheckTests(unittest.TestCase):
             (root / "cv").mkdir()
             (root / "cv" / "Gioia_Zheng_cv.pdf").write_bytes(b"%PDF-1.4\n")
             readme = VALID_README.replace(
-                "https://www.linkedin.com/in/gioia-zheng-9233a0303",
+                "https://www.linkedin.com/in/gioiazheng/",
                 "https://www.linkedin.com/in/example",
             )
             (root / "README.md").write_text(readme, encoding="utf-8")
@@ -84,7 +86,25 @@ class ProfileCheckTests(unittest.TestCase):
 
             self.assertIn(
                 "README.md is missing required link: "
-                "https://www.linkedin.com/in/gioia-zheng-9233a0303.",
+                "https://www.linkedin.com/in/gioiazheng/.",
+                errors,
+            )
+
+    def test_reports_forbidden_profile_text(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            (root / "cv").mkdir()
+            (root / "cv" / "Gioia_Zheng_cv.pdf").write_bytes(b"%PDF-1.4\n")
+            readme = VALID_README.replace(
+                "Sapienza University of Rome, Italy",
+                "Sapienza University of Rome, Italy\nTU Darmstadt",
+            )
+            (root / "README.md").write_text(readme, encoding="utf-8")
+
+            errors = validate_profile(root)
+
+            self.assertIn(
+                "README.md contains forbidden profile text: TU Darmstadt.",
                 errors,
             )
 

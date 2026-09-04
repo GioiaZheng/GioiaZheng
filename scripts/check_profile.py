@@ -12,6 +12,7 @@ from urllib.parse import unquote
 REQUIRED_HEADINGS = (
     "About Me",
     "Selected Work",
+    "Selected Open-Source Contributions",
     "Current Research",
 )
 
@@ -19,14 +20,23 @@ REQUIRED_PHRASES = (
     "Gioia Zheng",
     "Applied Computer Science and Artificial Intelligence",
     "Sapienza University of Rome",
+    "RAG/LLM Evaluation",
     "failure analysis",
+    "Reinforcement Learning for game and embodied agents",
 )
 
 REQUIRED_LINKS = (
     "https://gioiazheng.github.io",
-    "https://www.linkedin.com/in/gioia-zheng-9233a0303",
+    "https://www.linkedin.com/in/gioiazheng/",
     "mailto:gioia.zheng.stud@gmail.com",
     "cv/Gioia_Zheng_cv.pdf",
+)
+
+FORBIDDEN_TEXT = (
+    "TU Darmstadt",
+    "Incoming M.Sc.",
+    "incoming master's student",
+    "https://www.linkedin.com/in/gioia-zheng-9233a0303",
 )
 
 MOJIBAKE_MARKERS = ("Ã", "Â", "â€", "â€“", "â€™")
@@ -62,6 +72,10 @@ def validate_profile(root: Path) -> list[str]:
     for phrase in REQUIRED_PHRASES:
         if phrase not in content:
             errors.append(f"README.md is missing required profile text: {phrase}.")
+
+    for forbidden in FORBIDDEN_TEXT:
+        if forbidden in content:
+            errors.append(f"README.md contains forbidden profile text: {forbidden}.")
 
     for line_number, line in enumerate(content.splitlines(), start=1):
         if any(marker in line for marker in MOJIBAKE_MARKERS):

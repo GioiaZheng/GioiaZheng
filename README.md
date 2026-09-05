@@ -36,6 +36,7 @@ inspectable artifacts.
 | --- | --- | --- |
 | [rag-observatory](https://github.com/GioiaZheng/rag-observatory) · [Live Space](https://huggingface.co/spaces/GioiaZheng/rag-observatory) · [Toy Dataset](https://huggingface.co/datasets/GioiaZheng/rag-observatory-toy-traces) | Trace-based analysis for RAG systems | Research prototype for inspecting retrieved evidence, generated answers, execution traces, and failure labels |
 | [msmarco-genqa](https://github.com/GioiaZheng/msmarco-genqa) · [Benchmark Runs](https://huggingface.co/datasets/GioiaZheng/msmarco-genqa-benchmark-runs) | Retrieval-augmented generation on MS MARCO | Retrieval, reranking, generation, grounding analysis, paired statistical evaluation, and reproducible experiment reports |
+| [q-learning-exploitability](https://github.com/GioiaZheng/q-learning-exploitability) · [Evidence Map](https://gioiazheng.github.io/projects/q-learning-exploitability/) | Exact agent evaluation and controlled failure analysis | Adversarial backups and D4 evidence pooling reduced force-loss policies from 6/6 to 0/6 under matched Q-update budgets |
 | [Public research artifacts](https://huggingface.co/GioiaZheng) | Reusable evidence for evaluation work | Hugging Face datasets / Spaces, versioned reports, release archives, manifests, and trace examples connected back to the source repositories |
 
 ---

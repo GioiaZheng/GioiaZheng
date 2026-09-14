@@ -47,7 +47,9 @@ Only merged, publicly verifiable contributions are listed here.
 
 | Ecosystem | Contribution | Evidence |
 | --- | --- | --- |
-| MTEB | Documented the evaluation request workflow for contributors. | [embeddings-benchmark/mteb#4861](https://github.com/embeddings-benchmark/mteb/pull/4861) |
+| MTEB | Fixed duplicate counting for symmetric STS pairs. | [embeddings-benchmark/mteb#4958](https://github.com/embeddings-benchmark/mteb/pull/4958) |
+| Pyserini | Fixed M-BEIR instruction lookup from cache-home paths. | [castorini/pyserini#2655](https://github.com/castorini/pyserini/pull/2655) |
+| MTEB | Updated GermanGovService retrieval to the v2 dataset. | [embeddings-benchmark/mteb#5323](https://github.com/embeddings-benchmark/mteb/pull/5323) |
 | MTEB Leaderboard | Added model language-scope display on leaderboard cards. | [embeddings-benchmark/leaderboard-frontend#31](https://github.com/embeddings-benchmark/leaderboard-frontend/pull/31) |
 
 ---

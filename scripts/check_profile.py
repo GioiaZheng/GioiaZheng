@@ -18,22 +18,23 @@ REQUIRED_HEADINGS = (
 
 REQUIRED_PHRASES = (
     "Gioia Zheng",
+    "M.Sc. Computer Science",
+    "TU Darmstadt",
     "Applied Computer Science and Artificial Intelligence",
     "Sapienza University of Rome",
     "RAG/LLM Evaluation",
     "failure analysis",
-    "Reinforcement Learning for game and embodied agents",
+    "reinforcement-learning agents",
 )
 
 REQUIRED_LINKS = (
     "https://gioiazheng.github.io",
     "https://www.linkedin.com/in/gioiazheng/",
     "mailto:gioia.zheng.stud@gmail.com",
-    "cv/Gioia_Zheng_cv.pdf",
+    "https://gioiazheng.github.io/cv/Gioia_Zheng_Research_CV.pdf",
 )
 
 FORBIDDEN_TEXT = (
-    "TU Darmstadt",
     "Incoming M.Sc.",
     "incoming master's student",
     "https://www.linkedin.com/in/gioia-zheng-9233a0303",

@@ -1,8 +1,8 @@
 <h1 align="center">Gioia Zheng</h1>
 
 <p align="center">
-B.Sc. Student in Applied Computer Science and Artificial Intelligence<br>
-Sapienza University of Rome, Italy
+M.Sc. Computer Science · TU Darmstadt<br>
+B.Sc. Applied Computer Science and Artificial Intelligence · Sapienza University of Rome · Expected Dec 2026
 </p>
 
 <p align="center">
@@ -10,15 +10,15 @@ Sapienza University of Rome, Italy
 <a href="https://huggingface.co/GioiaZheng">Hugging Face</a> ·
 <a href="https://www.linkedin.com/in/gioiazheng/">LinkedIn</a> ·
 <a href="mailto:gioia.zheng.stud@gmail.com">Email</a> ·
-<a href="cv/Gioia_Zheng_cv.pdf">Academic CV</a>
+<a href="https://gioiazheng.github.io/cv/Gioia_Zheng_Research_CV.pdf">Research CV</a>
 </p>
 
 ---
 
 ## About Me
 
-Research focus: Information Retrieval, RAG/LLM Evaluation, Reproducible ML
-Systems, and Reinforcement Learning for game and embodied agents.
+Primary focus: Information Retrieval, RAG/LLM Evaluation, and Reproducible ML
+Systems. Secondary direction: exact evaluation of reinforcement-learning agents.
 
 I study information retrieval and retrieval-augmented generation, focusing on
 when improvements in retrieval do—or do not—lead to more accurate and grounded
@@ -59,9 +59,9 @@ Only merged, publicly verifiable contributions are listed here.
 **Research question:** When does better retrieval improve grounded generation,
 and when do conventional evaluation metrics hide the failure?
 
-**Current study:** Controlled retrieve–rerank–generate experiments on MS MARCO,
-using paired statistical evaluation, explicit grounding measures, and
-per-example failure analysis.
+**Current study:** Cross-dataset retrieval and reranking evaluation on MS MARCO,
+TREC-DL, SciFact, and NFCorpus, including retrieval-depth sensitivity,
+candidate coverage, and query-level failure analysis.
 
-**Research direction:** Developing a versioned RAG failure taxonomy that
-distinguishes retrieval, reranking, evidence-use, and generation errors.
+**Secondary direction:** Exact evaluation of reinforcement-learning agents
+under worst-case opponents.

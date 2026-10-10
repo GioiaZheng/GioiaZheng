@@ -2,7 +2,7 @@
 
 <p align="center">
 M.Sc. Computer Science · TU Darmstadt<br>
-B.Sc. Applied Computer Science and Artificial Intelligence · Sapienza University of Rome · Expected Dec 2026
+B.Sc. Applied Computer Science and Artificial Intelligence · Sapienza University of Rome
 </p>
 
 <p align="center">

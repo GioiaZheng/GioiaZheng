@@ -18,7 +18,7 @@ B.Sc. Applied Computer Science and Artificial Intelligence · Sapienza Universit
 <a href="https://gioiazheng.github.io">Website</a> -
 <a href="https://www.linkedin.com/in/gioiazheng/">LinkedIn</a> -
 <a href="mailto:gioia.zheng.stud@gmail.com">Email</a> -
-<a href="https://gioiazheng.github.io/cv/Gioia_Zheng_Research_CV.pdf">Research CV</a>
+<a href="https://gioiazheng.github.io/cv/Gioia_Zheng_CV.pdf">CV</a>
 </p>
 
 ## About Me
@@ -45,11 +45,11 @@ class ProfileCheckTests(unittest.TestCase):
 
             self.assertEqual(validate_profile(root), [])
 
-    def test_reports_missing_research_cv_link(self) -> None:
+    def test_reports_missing_cv_link(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir)
             readme = VALID_README.replace(
-                "https://gioiazheng.github.io/cv/Gioia_Zheng_Research_CV.pdf",
+                "https://gioiazheng.github.io/cv/Gioia_Zheng_CV.pdf",
                 "https://example.com/resume.pdf",
             )
             (root / "README.md").write_text(readme, encoding="utf-8")
@@ -58,7 +58,7 @@ class ProfileCheckTests(unittest.TestCase):
 
             self.assertIn(
                 "README.md is missing required link: "
-                "https://gioiazheng.github.io/cv/Gioia_Zheng_Research_CV.pdf.",
+                "https://gioiazheng.github.io/cv/Gioia_Zheng_CV.pdf.",
                 errors,
             )
 

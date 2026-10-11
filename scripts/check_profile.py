@@ -31,7 +31,7 @@ REQUIRED_LINKS = (
     "https://gioiazheng.github.io",
     "https://www.linkedin.com/in/gioiazheng/",
     "mailto:gioia.zheng.stud@gmail.com",
-    "https://gioiazheng.github.io/cv/Gioia_Zheng_Research_CV.pdf",
+    "https://gioiazheng.github.io/cv/Gioia_Zheng_CV.pdf",
 )
 
 FORBIDDEN_TEXT = (

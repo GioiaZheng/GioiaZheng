@@ -10,7 +10,7 @@ B.Sc. Applied Computer Science and Artificial Intelligence · Sapienza Universit
 <a href="https://huggingface.co/GioiaZheng">Hugging Face</a> ·
 <a href="https://www.linkedin.com/in/gioiazheng/">LinkedIn</a> ·
 <a href="mailto:gioia.zheng.stud@gmail.com">Email</a> ·
-<a href="https://gioiazheng.github.io/cv/Gioia_Zheng_Research_CV.pdf">Research CV</a>
+<a href="https://gioiazheng.github.io/cv/Gioia_Zheng_CV.pdf">CV</a>
 </p>
 
 ---

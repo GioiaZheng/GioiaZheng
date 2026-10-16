@@ -47,6 +47,8 @@ Only merged, publicly verifiable contributions are listed here.
 
 | Ecosystem | Contribution | Evidence |
 | --- | --- | --- |
+| Open RAG Eval | Preserved input query order when loading RAG results and added a regression test. | [vectara/open-rag-eval#162](https://github.com/vectara/open-rag-eval/pull/162) |
+| MTEB Results | Added checks requiring reproducible run settings for newly submitted results. | [embeddings-benchmark/results#676](https://github.com/embeddings-benchmark/results/pull/676) |
 | MTEB | Fixed duplicate counting for symmetric STS pairs. | [embeddings-benchmark/mteb#4958](https://github.com/embeddings-benchmark/mteb/pull/4958) |
 | Pyserini | Fixed M-BEIR instruction lookup from cache-home paths. | [castorini/pyserini#2655](https://github.com/castorini/pyserini/pull/2655) |
 | MTEB | Updated GermanGovService retrieval to the v2 dataset. | [embeddings-benchmark/mteb#5323](https://github.com/embeddings-benchmark/mteb/pull/5323) |

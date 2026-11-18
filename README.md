@@ -56,14 +56,11 @@ Gioia Zheng. Accepted technical report, Predictive AI Evaluation Competition
 
 Only merged, publicly verifiable contributions are listed here.
 
-| Ecosystem | Contribution | Evidence |
-| --- | --- | --- |
-| Open RAG Eval | Preserved input query order when loading RAG results and added a regression test. | [vectara/open-rag-eval#162](https://github.com/vectara/open-rag-eval/pull/162) |
-| MTEB | Fixed duplicate counting for symmetric STS pairs. | [embeddings-benchmark/mteb#4958](https://github.com/embeddings-benchmark/mteb/pull/4958) |
-| MTEB | Updated GermanGovService retrieval to the v2 dataset. | [embeddings-benchmark/mteb#5323](https://github.com/embeddings-benchmark/mteb/pull/5323) |
-| MTEB Results | Added checks requiring reproducible run settings for newly submitted results. | [embeddings-benchmark/results#676](https://github.com/embeddings-benchmark/results/pull/676) |
-| MTEB Leaderboard | Added model language-scope display on leaderboard cards. | [embeddings-benchmark/leaderboard-frontend#31](https://github.com/embeddings-benchmark/leaderboard-frontend/pull/31) |
-| Pyserini | Fixed M-BEIR instruction lookup from cache-home paths. | [castorini/pyserini#2655](https://github.com/castorini/pyserini/pull/2655) |
+| Ecosystem | Contributions and evidence |
+| --- | --- |
+| Open RAG Eval | Preserved input query order when loading RAG results and added a regression test. [vectara/open-rag-eval#162](https://github.com/vectara/open-rag-eval/pull/162) |
+| MTEB | Fixed duplicate counting for symmetric STS pairs. [embeddings-benchmark/mteb#4958](https://github.com/embeddings-benchmark/mteb/pull/4958)<br/><br/>Updated GermanGovService retrieval to the v2 dataset. [embeddings-benchmark/mteb#5323](https://github.com/embeddings-benchmark/mteb/pull/5323)<br/><br/>Added checks requiring reproducible run settings for newly submitted results. [embeddings-benchmark/results#676](https://github.com/embeddings-benchmark/results/pull/676)<br/><br/>Added model language-scope display on leaderboard cards. [embeddings-benchmark/leaderboard-frontend#31](https://github.com/embeddings-benchmark/leaderboard-frontend/pull/31) |
+| Pyserini | Fixed M-BEIR instruction lookup from cache-home paths. [castorini/pyserini#2655](https://github.com/castorini/pyserini/pull/2655) |
 
 ---
 

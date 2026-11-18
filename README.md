@@ -35,7 +35,7 @@ inspectable artifacts.
 **[Fixed Shrinkage for Predictive AI Evaluation with Few Observed Labels](https://openreview.net/forum?id=unVHJGkE8n)**
 
 Gioia Zheng. Accepted technical report, Predictive AI Evaluation Competition
-(PAIEC) at NeurIPS 2026 · November 2026.
+(PAIEC) at NeurIPS 2026 · November 2026. Selected for poster presentation.
 
 [Code and reproduction instructions](https://github.com/GioiaZheng/paiec-2026)
 
